@@ -1,7 +1,7 @@
 name: "base"
 channels:
   - defaults
- dependencies:
- - matplotlib
+# dependencies:
+# - add packages here
 # - one per line
 prefix: "/opt/conda"
