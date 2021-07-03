@@ -1,4 +1,30 @@
-- '@id': https://renkulab.io/datasets/78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+  '@type':
+  - http://schema.org/URL
+  http://schema.org/url:
+  - '@id': https://renkulab.io/datasets/78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+- '@id': https://renkulab.io/blob/e224e6d83af586d1e1c073f88cc01ddbcd5354bd/data/worldometers-data/italy.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-03T20:48:28.682513+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': italy.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/italy.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/italy.csv@e224e6d83af586d1e1c073f88cc01ddbcd5354bd
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/italy.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/italy.csv
+- '@id': https://renkulab.io/datasets/89eeb1c6-84a0-45f8-9ccc-6467276e101a
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
   - http://schema.org/Dataset
@@ -8,10 +34,11 @@
   http://schema.org/creator:
   - '@id': mailto:selim.amrari.pro@protonmail.ch
   http://schema.org/dateCreated:
-  - '@value': '2021-07-03T19:39:34.946316+00:00'
-  http://schema.org/hasPart: []
+  - '@value': '2021-07-03T20:48:28.686923+00:00'
+  http://schema.org/hasPart:
+  - '@id': https://renkulab.io/blob/e224e6d83af586d1e1c073f88cc01ddbcd5354bd/data/worldometers-data/italy.csv
   http://schema.org/identifier:
-  - '@value': 78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+  - '@value': 89eeb1c6-84a0-45f8-9ccc-6467276e101a
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/keywords: []
@@ -19,11 +46,13 @@
   - '@value': covid data from worldometers.info/
   http://schema.org/subjectOf: []
   http://schema.org/url:
-  - '@value': https://renkulab.io/datasets/78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+  - '@value': https://renkulab.io/datasets/89eeb1c6-84a0-45f8-9ccc-6467276e101a
   http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': 78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+  - '@value': 89eeb1c6-84a0-45f8-9ccc-6467276e101a
   http://www.w3.org/ns/prov#atLocation:
   - '@value': .renku/datasets/78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
+  http://www.w3.org/ns/prov#wasDerivedFrom:
+  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
 - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   '@type':
   - http://schema.org/Project
