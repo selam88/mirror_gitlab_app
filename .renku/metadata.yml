@@ -1,0 +1,30 @@
+'@id': https://renkulab.io/projects/selim.amrari.pro/Test%20-%20first%20project
+'@type':
+- http://schema.org/Project
+- http://www.w3.org/ns/prov#Location
+http://schema.org/agent: 0.15.1
+http://schema.org/creator:
+  '@id': mailto:selim.amrari.pro@protonmail.ch
+  '@type':
+  - http://schema.org/Person
+  - http://www.w3.org/ns/prov#Person
+  http://schema.org/affiliation: null
+  http://schema.org/alternateName: null
+  http://schema.org/email: selim.amrari.pro@protonmail.ch
+  http://schema.org/name: Selim Amrari
+  http://www.w3.org/2000/01/rdf-schema#label: Selim Amrari
+http://schema.org/dateCreated: '2021-07-03T17:48:21.458456+00:00'
+http://schema.org/name: Test - first project
+http://schema.org/schemaVersion: '8'
+https://swissdatasciencecenter.github.io/renku-ontology#automatedTemplateUpdate: false
+https://swissdatasciencecenter.github.io/renku-ontology#immutableTemplateFiles: []
+https://swissdatasciencecenter.github.io/renku-ontology#templateId: python-minimal
+https://swissdatasciencecenter.github.io/renku-ontology#templateMetadata: '{"__template_source__":
+  "https://github.com/SwissDataScienceCenter/renku-project-template", "__template_ref__":
+  "0.1.21", "__template_id__": "python-minimal", "__namespace__": "selim.amrari.pro",
+  "__automated_update__": true, "__repository__": "https://renkulab.io/gitlab", "__sanitized_project_name__":
+  "test-first-project", "__project_slug__": "selim.amrari.pro/test-first-project",
+  "description": "Test - first project", "name": "Test - first project"}'
+https://swissdatasciencecenter.github.io/renku-ontology#templateReference: 0.1.21
+https://swissdatasciencecenter.github.io/renku-ontology#templateSource: https://github.com/SwissDataScienceCenter/renku-project-template
+https://swissdatasciencecenter.github.io/renku-ontology#templateVersion: 58ee36de2c9c152d9f51eddc5b685483b6beda73
