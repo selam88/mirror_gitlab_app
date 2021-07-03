@@ -1,1 +1,5 @@
+matplotlib==3.4.2
 pandas
+covid_daily
+numpy
+scipy
