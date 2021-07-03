@@ -1,11 +1,10 @@
 import os
 import pandas as pd
-import subprocess
 import covid_daily
 from covid_daily.constants import AVAILABLE_CHARTS 
 
 
-def records_country(country_name, data_folder, add_dataset=True):
+def records_country(country_name, data_folder):
     """
     Get and records data from Worldometers.info
     Args: 
@@ -17,7 +16,4 @@ def records_country(country_name, data_folder, add_dataset=True):
     data = pd.concat(data, axis=1)
     csv_path = os.path.join(data_folder,"{0:s}.csv".format(country_name))
     data.to_csv(csv_path)
-    if add_dataset:
-        cmd = "renku dataset add worldometers-data {0:s}".format(csv_path)
-        subprocess.run(cmd, shell=True)
-    return
+    return csv_path
