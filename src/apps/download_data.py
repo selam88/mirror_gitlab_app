@@ -1,6 +1,6 @@
 import argparse, sys
 sys.path.append("/work/test-first-project/src")
-import data_utils as data_utils
+import data_utils as d_u
 from covid_daily.constants import AVAILABLE_COUNTRIES 
 import subprocess
 
@@ -14,7 +14,7 @@ def main(folder_name, add_dataset=True):
     success = []
     for country in AVAILABLE_COUNTRIES:
         try:
-            success.append(data_utils.records_country(country, folder_name))
+            success.append(d_u.records_country(country, folder_name))
         except:
             print("cannot records country:{0:s}".format(country))
     if add_dataset:
