@@ -11,9 +11,15 @@ def main(csv_folder,
          in_timesteps, out_timesteps, 
          resampling_rule, add_dataset=True):
     """
-    main routine, go through each considered availabler countries and try to records corresponding data
-    Args:
-        folder_name: (str) path to the folder to record data in
+    main routine, merge csv files, creates and records sequences
+    args:
+        csv_folder: (str) path to the folder containing recorded csv files,
+        input_variables: ([str]) variables to use as input,
+        output_variable: (str) variable to use as target to predict,
+        in_timesteps: (int) number of input timestep, 
+        out_timesteps: (int) number of output timestep,
+        resampling_rule: (str) rule to apply resampling ("None"(default), "W", "M", "W-Mon"...)
+        add_dataset: (bool) if True, commit data changes
     """
     #parse csv file
     csv_files = [os.path.join(csv_folder, f) for f in os.listdir(csv_folder) if f.endswith(".csv")]
@@ -56,14 +62,14 @@ def main(csv_folder,
         for v in [output_seq, last_in_dates, country_array]:
             assert v.shape[0]==input_seq.shape[0] 
             
-    # record sequence
+    # record sequences
     model_data_folder = "/work/test-first-project/data/model-data/"
     d_u.save_obj(input_seq, os.path.join(model_data_folder, "input_sequences.pkl"))
     d_u.save_obj(output_seq, os.path.join(model_data_folder, "output_sequences.pkl"))
     d_u.save_obj(last_in_dates, os.path.join(model_data_folder, "last_in_dates.pkl"))
     d_u.save_obj(country_array, os.path.join(model_data_folder, "country.pkl"))
             
-    # track dataset record
+    # track dataset records
     if add_dataset:
         files = [os.path.join(model_data_folder, f) for f in os.listdir(model_data_folder)]
         cmd = "renku dataset add --overwrite model-data {0:s}".format(" ".join(files))
@@ -78,7 +84,7 @@ if __name__ == "__main__":
                         type=str, 
                         default="/work/test-first-project/data/worldometers-data/")
     parser.add_argument('--input_variables', 
-                        help='variables to use as intput', 
+                        help='variables to use as input', 
                         type=str, nargs='+',
                         default=["Currently_Infected", "Novel_Coronavirus_Daily_Cases"])
     parser.add_argument('--output_variable', 

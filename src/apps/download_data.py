@@ -10,6 +10,7 @@ def main(folder_name, add_dataset=True):
     main routine, go through each considered availabler countries and try to records corresponding data
     Args:
         folder_name: (str) path to the folder to record data in
+        add_dataset: (bool) if True, commit data changes
     """
     success = []
     for country in AVAILABLE_COUNTRIES:
