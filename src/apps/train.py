@@ -1,6 +1,6 @@
 import argparse, sys
 sys.path.append("/work/test-first-project/src")
-import data_utils as load_obj
+from data_utils import load_training_data
 import train_utils as t_u
 import numpy as np
 import subprocess
@@ -41,4 +41,4 @@ if __name__ == "__main__":
                         default="model_1")
 
     args = parser.parse_args()
-    main(folder_name=args.model_name)
+    main(model_name=args.model_name)
