@@ -39,6 +39,10 @@ if __name__ == "__main__":
                         help='backup name of the model', 
                         type=str, 
                         default="model_1")
+    parser.add_argument('-e', '--epochs', 
+                        help='number of epochs to train', 
+                        type=int, 
+                        default=30)
 
     args = parser.parse_args()
-    main(model_name=args.model_name)
+    main(model_name=args.model_name, n_epochs=args.epochs)
