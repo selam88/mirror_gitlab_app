@@ -6,7 +6,6 @@ from covid_daily.constants import AVAILABLE_CHARTS
 import pickle
 
 
-
 def records_country(country_name, data_folder):
     """
     Get and records data from Worldometers.info
@@ -70,3 +69,20 @@ def load_obj(name):
     name = name if not name.endswith(".pkl") else name
     with open(name, 'rb') as f:
         return pickle.load(f)
+    
+def load_training_data(model_folder="/work/test-first-project/data/model-data/"):
+    """
+    load training data from hard-coded directory
+    args:
+        model_folder(optional): (str)path to the folder containing saved data
+    return: 
+        input_seq: (numpy array) array of "input" multivariate sequences
+        output_seq: (numpy array) array of "input" univariate sequences
+        last_in_dates: (numpy array) array of index of the last timesteps from input sequences
+        country_array: (numpy array) array of countries corresponding to the sequences 
+    """
+    input_seq = load_obj(os.path.join(model_folder, "input_sequences.pkl"))
+    output_seq = load_obj(os.path.join(model_folder, "output_sequences.pkl"))
+    last_in_dates = load_obj(os.path.join(model_folder, "last_in_dates.pkl"))
+    country_array = load_obj(os.path.join(model_folder, "country.pkl"))
+    return input_seq, output_seq, last_in_dates, country_array
