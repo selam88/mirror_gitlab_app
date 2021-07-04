@@ -1,4 +1,4 @@
-import argparse, sys
+import argparse, sys, os
 sys.path.append("/work/test-first-project/src")
 from data_utils import load_training_data
 import train_utils as t_u
@@ -28,7 +28,7 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
     
     # track dataset records
     if add_dataset:
-        cmd = "renku dataset add --create model-data {0:s}".format(model_path)
+        cmd = "renku dataset add --overwrite model-data {0:s}".format(model_path)
         subprocess.run(cmd, shell=True)
     return
 

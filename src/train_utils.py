@@ -22,7 +22,7 @@ def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
     
     # define model
     model = Sequential()
-    model.add(LSTM(n_units, activation='relu', input_shape=(in_timesteps, n_variables)))
+    model.add(LSTM(n_units, activation='relu', input_shape=(in_timesteps, n_features)))
     model.add(RepeatVector(out_timesteps))
     model.add(LSTM(n_units, activation='relu', return_sequences=True))
     model.add(TimeDistributed(Dense(int(n_units/2), activation='relu')))

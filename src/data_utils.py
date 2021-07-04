@@ -66,7 +66,6 @@ def load_obj(name):
     '''
     load object
     '''
-    import pdb; pdb.set_trace()
     name = name if not name.endswith(".pkl") else name
     with open(name, 'rb') as f:
         return pickle.load(f)
