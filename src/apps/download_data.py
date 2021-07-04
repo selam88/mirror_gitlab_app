@@ -18,7 +18,7 @@ def main(folder_name, add_dataset=True):
         except:
             print("cannot records country:{0:s}".format(country))
     if add_dataset:
-        cmd = "renku dataset add worldometers-data {0:s}".format(" ".join(success))
+        cmd = "renku dataset add --overwrite worldometers-data {0:s}".format(" ".join(success))
         subprocess.run(cmd, shell=True)
     return
 

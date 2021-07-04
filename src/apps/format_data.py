@@ -1,4 +1,4 @@
-import argparse, sys
+import argparse, sys, os
 sys.path.append("/work/test-first-project/src")
 import data_utils as d_u
 import numpy as np
@@ -6,7 +6,10 @@ import pandas as pd
 import subprocess
 
 
-def main(folder_name, add_dataset=True):
+def main(csv_folder,
+         input_variables, output_variable, 
+         in_timesteps, out_timesteps, 
+         resampling_rule, add_dataset=True):
     """
     main routine, go through each considered availabler countries and try to records corresponding data
     Args:
@@ -48,12 +51,22 @@ def main(folder_name, add_dataset=True):
         output_seq =np.concatenate((output_seq, yy), axis=0) 
         last_in_dates = np.concatenate((last_in_dates, xx_last_date), axis=0)
         country_array = np.concatenate((country_array, np.array([country for i in range(len(xx))])), axis=0)
+        assert input_seq.shape[1]==in_timesteps
+        assert output_seq.shape[1]==out_timesteps
         for v in [output_seq, last_in_dates, country_array]:
             assert v.shape[0]==input_seq.shape[0] 
             
+    # record sequence
+    model_data_folder = "/work/test-first-project/data/model-data/"
+    d_u.save_obj(input_seq, os.path.join(model_data_folder, "input_sequences.pkl"))
+    d_u.save_obj(output_seq, os.path.join(model_data_folder, "output_sequences.pkl"))
+    d_u.save_obj(last_in_dates, os.path.join(model_data_folder, "last_in_dates.pkl"))
+    d_u.save_obj(country_array, os.path.join(model_data_folder, "country.pkl"))
+            
     # track dataset record
     if add_dataset:
-        cmd = "renku dataset add worldometers-data {0:s}".format(" ".join(success))
+        files = [os.path.join(model_data_folder, f) for f in os.listdir(model_data_folder)]
+        cmd = "renku dataset add --overwrite model-data {0:s}".format(" ".join(files))
         subprocess.run(cmd, shell=True)
     return
 
