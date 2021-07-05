@@ -19,10 +19,11 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
     """
     # load training data and intialize parameters
     input_seq, output_seq, last_in_dates, country_array = load_training_data()
-    np.random.seed(0); indices = np.random.permutation(len(iris_X))
+    np.random.seed(0); indices = np.random.permutation(len(input_seq))
     input_seq, output_seq, last_in_dates, country_array = input_seq[indices], output_seq[indices], last_in_dates[indices], country_array[indices]
     input_seq, output_seq, scaler = t_u.scale_data(input_seq, output_seq)
     in_timesteps, out_timesteps, n_features = input_seq.shape[1], output_seq.shape[1], input_seq.shape[2]
+    print("sequences length, inputs: {0:d}, output:{1:d}".format(in_timesteps, out_timesteps))
     
     # set up model, train and record
     model = t_u.set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=n_units)
@@ -47,6 +48,10 @@ if __name__ == "__main__":
                         help='number of epochs to train', 
                         type=int, 
                         default=30)
+    parser.add_argument('-u', '--n_units', 
+                        help='number of units in the lstm layer composing the model', 
+                        type=int, 
+                        default=50)
 
     args = parser.parse_args()
-    main(model_name=args.model_name, n_epochs=args.epochs)
+    main(model_name=args.model_name, n_epochs=args.epochs, n_units=args.n_units)
