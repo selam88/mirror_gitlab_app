@@ -1,0 +1,155 @@
+- '@id': https://renkulab.io/blob/3f99b669cff614b14b2b5c1a6f658f1d83ae4313/data/model-data/output_sequences.pkl
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-05T13:59:30.915754+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': output_sequences.pkl
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/model-data/output_sequences.pkl
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/model-data/output_sequences.pkl@3f99b669cff614b14b2b5c1a6f658f1d83ae4313
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/model-data/output_sequences.pkl
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/model-data/output_sequences.pkl
+- '@id': https://renkulab.io/blob/d427b462c2ae693cad2b22832b69e24a4cc0f82f/data/model-data/country.pkl
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-05T13:59:30.954701+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': country.pkl
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/model-data/country.pkl
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/model-data/country.pkl@d427b462c2ae693cad2b22832b69e24a4cc0f82f
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/model-data/country.pkl
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/model-data/country.pkl
+- '@id': https://renkulab.io/blob/d427b462c2ae693cad2b22832b69e24a4cc0f82f/data/model-data/input_sequences.pkl
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-05T13:59:30.943906+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': input_sequences.pkl
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/model-data/input_sequences.pkl
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/model-data/input_sequences.pkl@d427b462c2ae693cad2b22832b69e24a4cc0f82f
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/model-data/input_sequences.pkl
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/model-data/input_sequences.pkl
+- '@id': https://renkulab.io/blob/d427b462c2ae693cad2b22832b69e24a4cc0f82f/data/model-data/last_in_dates.pkl
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-05T13:59:30.932841+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': last_in_dates.pkl
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/model-data/last_in_dates.pkl
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/model-data/last_in_dates.pkl@d427b462c2ae693cad2b22832b69e24a4cc0f82f
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/model-data/last_in_dates.pkl
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/model-data/last_in_dates.pkl
+- '@id': https://renkulab.io/datasets/5b2df728-5afc-4664-8e0d-ce53ac3dfa90
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/Dataset
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/alternateName:
+  - '@value': models
+  http://schema.org/creator:
+  - '@id': mailto:selim.amrari.pro@protonmail.ch
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-05T13:59:30.732239+00:00'
+  http://schema.org/hasPart:
+  - '@id': https://renkulab.io/blob/3f99b669cff614b14b2b5c1a6f658f1d83ae4313/data/model-data/output_sequences.pkl
+  - '@id': https://renkulab.io/blob/d427b462c2ae693cad2b22832b69e24a4cc0f82f/data/model-data/last_in_dates.pkl
+  - '@id': https://renkulab.io/blob/d427b462c2ae693cad2b22832b69e24a4cc0f82f/data/model-data/input_sequences.pkl
+  - '@id': https://renkulab.io/blob/d427b462c2ae693cad2b22832b69e24a4cc0f82f/data/model-data/country.pkl
+  http://schema.org/identifier:
+  - '@value': 5b2df728-5afc-4664-8e0d-ce53ac3dfa90
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/keywords: []
+  http://schema.org/name:
+  - '@value': models
+  http://schema.org/subjectOf: []
+  http://schema.org/url:
+  - '@value': https://renkulab.io/datasets/5b2df728-5afc-4664-8e0d-ce53ac3dfa90
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': 5b2df728-5afc-4664-8e0d-ce53ac3dfa90
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': .renku/datasets/5b2df728-5afc-4664-8e0d-ce53ac3dfa90
+- '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  '@type':
+  - http://schema.org/Project
+  - http://www.w3.org/ns/prov#Location
+  http://schema.org/agent:
+  - '@value': 0.15.1
+  http://schema.org/creator:
+  - '@id': mailto:selim.amrari.pro@protonmail.ch
+  http://schema.org/dateCreated:
+  - '@value': '2021-07-03T17:48:21.458456+00:00'
+  http://schema.org/name:
+  - '@value': Test - first project
+  http://schema.org/schemaVersion:
+  - '@value': '8'
+  https://swissdatasciencecenter.github.io/renku-ontology#automatedTemplateUpdate:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#immutableTemplateFiles: []
+  https://swissdatasciencecenter.github.io/renku-ontology#templateId:
+  - '@value': python-minimal
+  https://swissdatasciencecenter.github.io/renku-ontology#templateMetadata:
+  - '@value': '{"__template_source__": "https://github.com/SwissDataScienceCenter/renku-project-template",
+      "__template_ref__": "0.1.21", "__template_id__": "python-minimal", "__namespace__":
+      "selim.amrari.pro", "__automated_update__": true, "__repository__": "https://renkulab.io/gitlab",
+      "__sanitized_project_name__": "test-first-project", "__project_slug__": "selim.amrari.pro/test-first-project",
+      "description": "Test - first project", "name": "Test - first project"}'
+  https://swissdatasciencecenter.github.io/renku-ontology#templateReference:
+  - '@value': 0.1.21
+  https://swissdatasciencecenter.github.io/renku-ontology#templateSource:
+  - '@value': https://github.com/SwissDataScienceCenter/renku-project-template
+  https://swissdatasciencecenter.github.io/renku-ontology#templateVersion:
+  - '@value': 58ee36de2c9c152d9f51eddc5b685483b6beda73
+- '@id': mailto:selim.amrari.pro@protonmail.ch
+  '@type':
+  - http://schema.org/Person
+  - http://www.w3.org/ns/prov#Person
+  http://schema.org/email:
+  - '@value': selim.amrari.pro@protonmail.ch
+  http://schema.org/name:
+  - '@value': Selim Amrari
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': Selim Amrari
