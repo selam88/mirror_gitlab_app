@@ -6,7 +6,7 @@ import numpy as np
 import subprocess
 
 
-def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-project/data/models/", add_dataset=True):
+def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-project/data/models/", add_dataset=False):
     """
     main routine, load training data, set up, train and records model.
     args:
@@ -28,7 +28,7 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
     
     # track dataset records
     if add_dataset:
-        cmd = "renku dataset add --overwrite model-data {0:s}".format(model_path)
+        cmd = "renku dataset add --create models {0:s}".format(model_path)
         subprocess.run(cmd, shell=True)
     return
 

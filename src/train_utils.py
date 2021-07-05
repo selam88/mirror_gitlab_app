@@ -45,6 +45,7 @@ def save_model_score(folder_path, model):
     model.save(model_path, overwrite=True, include_optimizer=True)
     df = pd.DataFrame(model.history.history)
     if os.path.exists(csv_path):
+        print("model already exists: append history")
         old_df = pd.read_csv(csv_path)
         df = pd.concat([old_df, df], axis=0)
     df.to_csv(csv_path, index=False)        
