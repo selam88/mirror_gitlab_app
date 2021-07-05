@@ -42,7 +42,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--model_name', 
                         help='backup name of the model', 
                         type=str, 
-                        default="model_1")
+                        default="model_2")
     parser.add_argument('-e', '--epochs', 
                         help='number of epochs to train', 
                         type=int, 
