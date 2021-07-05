@@ -1,6 +1,5 @@
 import argparse, sys
-sys.path.append("/work/test-first-project/src")
-import data_utils as d_u
+from utils import data as d_u
 from covid_daily.constants import AVAILABLE_COUNTRIES 
 import subprocess
 

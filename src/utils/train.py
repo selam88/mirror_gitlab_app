@@ -1,5 +1,4 @@
 import os, sys
-sys.path.append("/work/test-first-project/src")
 import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -8,7 +7,7 @@ from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import TimeDistributed
 from sklearn.preprocessing import StandardScaler
-from data_utils import save_obj
+from utils.data import save_obj
 
 
 def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):

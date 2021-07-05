@@ -1,6 +1,5 @@
 import argparse, sys, os
-sys.path.append("/work/test-first-project/src")
-import data_utils as d_u
+from utils import data as d_u
 import numpy as np
 import pandas as pd
 import subprocess

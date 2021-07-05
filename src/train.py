@@ -1,7 +1,6 @@
 import argparse, sys, os
-sys.path.append("/work/test-first-project/src")
-from data_utils import load_training_data
-import train_utils as t_u
+from utils.data import load_training_data
+from utils import train as t_u
 import numpy as np
 import subprocess
 

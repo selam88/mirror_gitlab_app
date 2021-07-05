@@ -16,11 +16,3 @@ image_build:
     CI_COMMIT_SHA_7=$(echo $CI_COMMIT_SHA | cut -c1-7)
     docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
-
-flake8:
-  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
-  stage: syntax_check
-  allow_failure: true
-  script: 
-    - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics 
-    - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
