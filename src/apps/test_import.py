@@ -1,6 +1,5 @@
 import argparse, os
-from ..data_utils import load_training_data
-import train_utils as t_u
+from src.data_utils import load_training_data
 import numpy as np
 import subprocess
 
