@@ -19,13 +19,16 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
     """
     # load training data and intialize parameters
     input_seq, output_seq, last_in_dates, country_array = load_training_data()
+    np.random.seed(0); indices = np.random.permutation(len(iris_X))
+    input_seq, output_seq, last_in_dates, country_array = input_seq[indices], output_seq[indices], last_in_dates[indices], country_array[indices]
+    input_seq, output_seq, scaler = t_u.scale_data(input_seq, output_seq)
     in_timesteps, out_timesteps, n_features = input_seq.shape[1], output_seq.shape[1], input_seq.shape[2]
     
     # set up model, train and record
     model = t_u.set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=n_units)
     model.fit(input_seq, output_seq, epochs=n_epochs, batch_size=512, validation_split=0.08)
     model_path = os.path.join(models_folder, model_name)
-    t_u.save_model_score(model_path, model)
+    t_u.save_model_score(model_path, model, scaler=scaler)
     
     # track dataset records
     if add_dataset:

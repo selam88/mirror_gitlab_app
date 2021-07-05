@@ -1,4 +1,5 @@
-import os
+import os, sys
+sys.path.append("/work/test-first-project/src")
 import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -6,6 +7,7 @@ from tensorflow.keras.layers import Flatten
 from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import TimeDistributed
+from sklearn.preprocessing import StandardScaler
 
 
 def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
@@ -30,13 +32,14 @@ def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
     model.compile(loss='mse', optimizer='adam')
     return model
 
-def save_model_score(folder_path, model):
+def save_model_score(folder_path, model, scaler=None):
     """
     save model in a dedicated folder. Records fitting history as csv.
     if already exists, only append new history results and overwrite model.
     args:
         folder_path: (str) path to the dedicated folder to record model in
         model: (tf.Sequential) model instance to records
+        scaler(optional): scaler used to train
     """
     if not os.path.exists(folder_path): 
         os.mkdir(folder_path)
@@ -48,5 +51,22 @@ def save_model_score(folder_path, model):
         print("model already exists: append history")
         old_df = pd.read_csv(csv_path)
         df = pd.concat([old_df, df], axis=0)
-    df.to_csv(csv_path, index=False)        
+    df.to_csv(csv_path, index=False)  
+    if not isinstance(scaler, type(None)):
+        save_obj(scaler, os.path.join(folder_path, "scaler.pkl"))
     return
+
+def scale_data(X_seq, Y_seq, target_id=1):
+    scaler = StandardScaler()
+    scaler.fit(X_seq[:,-1,:])
+    for f in range(X_seq.shape[2]):
+        X_seq[:,:,f] = (X_seq[:,:,f] - scaler.mean_[f]) / scaler.scale_[f]
+    Y_seq = (Y_seq - scaler.mean_[target_id]) / scaler.scale_[target_id]
+    return X_seq, Y_seq, scaler
+
+def unscale_data(X_seq, Y_seq, scaler, target_id=1):
+    for f in range(X_seq.shape[2]):
+        X_seq[:,:,f] = (X_seq[:,:,f] * scaler.scale_[f]) + scaler.mean_[f]
+    Y_seq = (Y_seq * scaler.scale_[target_id]) + scaler.mean_[target_id]
+    return X_seq, Y_seq
+    
