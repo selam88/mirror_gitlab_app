@@ -8,6 +8,7 @@ from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import TimeDistributed
 from sklearn.preprocessing import StandardScaler
+from data_utils import save_obj
 
 
 def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
@@ -57,6 +58,17 @@ def save_model_score(folder_path, model, scaler=None):
     return
 
 def scale_data(X_seq, Y_seq, target_id=1):
+    """
+    scale sequence data
+    args:
+        X_seq: (numpy array) input sequences
+        Y_seq: (numpy array) output sequences
+        target_id: (int) index of the target variable
+    return:
+        X_seq: (numpy array) scaled input sequences
+        Y_seq: (numpy array) scaled output sequences
+        scaler: (sklearn.preprocessing.StandardScaler) StandardScaler instance
+    """
     scaler = StandardScaler()
     scaler.fit(X_seq[:,-1,:])
     for f in range(X_seq.shape[2]):
@@ -65,6 +77,17 @@ def scale_data(X_seq, Y_seq, target_id=1):
     return X_seq, Y_seq, scaler
 
 def unscale_data(X_seq, Y_seq, scaler, target_id=1):
+    """
+    reverse scaling of sequence data
+    args:
+        X_seq: (numpy array) scaled input sequences
+        Y_seq: (numpy array) scaled output sequences
+        scaler: (sklearn.preprocessing.StandardScaler) StandardScaler instance
+        target_id: (int) index of the target variable
+    return:
+        X_seq: (numpy array) input sequences
+        Y_seq: (numpy array) output sequences
+    """
     for f in range(X_seq.shape[2]):
         X_seq[:,:,f] = (X_seq[:,:,f] * scaler.scale_[f]) + scaler.mean_[f]
     Y_seq = (Y_seq * scaler.scale_[target_id]) + scaler.mean_[target_id]
