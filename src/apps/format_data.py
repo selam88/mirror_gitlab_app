@@ -61,6 +61,7 @@ def main(csv_folder,
         assert output_seq.shape[1]==out_timesteps
         for v in [output_seq, last_in_dates, country_array]:
             assert v.shape[0]==input_seq.shape[0] 
+    output_seq = output_seq[:,:,np.newaxis]
             
     # record sequences
     model_data_folder = "/work/test-first-project/data/model-data/"
@@ -72,7 +73,7 @@ def main(csv_folder,
     # track dataset records
     if add_dataset:
         files = [os.path.join(model_data_folder, f) for f in os.listdir(model_data_folder)]
-        cmd = "renku dataset add --overwrite model-data {0:s}".format(" ".join(files))
+        cmd = "renku dataset add --create models {0:s}".format(" ".join(files))
         subprocess.run(cmd, shell=True)
     return
 
