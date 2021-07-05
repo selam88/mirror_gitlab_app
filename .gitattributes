@@ -10,3 +10,5 @@ data/models/model_1/model/variables/variables.data-00000-of-00001 filter=lfs dif
 data/models/model_1/model/saved_model.pb filter=lfs diff=lfs merge=lfs -text
 data/models/model_test/model/saved_model.pb filter=lfs diff=lfs merge=lfs -text
 data/models/model_test/model/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+data/models/model_2/model/saved_model.pb filter=lfs diff=lfs merge=lfs -text
+data/models/model_2/model/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
