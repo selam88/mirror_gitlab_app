@@ -6,7 +6,8 @@ import numpy as np
 import subprocess
 
 
-def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-project/data/models/", add_dataset=True):
+def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-project/data/models/", add_dataset=True,
+        shuffle=False, ):
     """
     main routine, load training data, set up, train and records model.
     args:

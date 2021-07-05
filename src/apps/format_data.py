@@ -61,7 +61,7 @@ def main(csv_folder,
         assert output_seq.shape[1]==out_timesteps
         for v in [output_seq, last_in_dates, country_array]:
             assert v.shape[0]==input_seq.shape[0] 
-        output_seq = output_seq[:,:, np.newaxis]
+    output_seq = output_seq[:,:, np.newaxis]
             
     # record sequences
     model_data_folder = "/work/test-first-project/data/model-data/"
