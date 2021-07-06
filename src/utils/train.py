@@ -9,7 +9,7 @@ from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import TimeDistributed
 from sklearn.preprocessing import StandardScaler
-from src.utils.data import save_obj, load_obj
+from .data import save_obj, load_obj
 
 
 def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
