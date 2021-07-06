@@ -126,7 +126,7 @@ class scaled_model:
         self.scaler = load_obj(self.scaler_path)
         self.history = pd.read_csv(self.score_path)
         
-    def predict(X_seq, preprocess=True):
+    def predict(self, X_seq, preprocess=True):
         """
         Apply inference
         args:
