@@ -8,7 +8,7 @@ from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import TimeDistributed
 from sklearn.preprocessing import StandardScaler
-from utils.data import save_obj, load_obj
+from src.utils.data import save_obj, load_obj
 
 
 def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
@@ -70,7 +70,7 @@ def scale_data(X_seq, Y_seq=None, scaler=None, target_id=1):
         Y_seq: (numpy array) scaled output sequences
         scaler: (sklearn.preprocessing.StandardScaler) StandardScaler instance
     """
-    is isinstance(scaler, type(None)):
+    if isinstance(scaler, type(None)):
         scaler = StandardScaler()
         scaler.fit(X_seq[:,-1,:])
     for f in range(X_seq.shape[2]):
