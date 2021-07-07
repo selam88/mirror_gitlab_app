@@ -39,7 +39,7 @@ def main(csv_folder,
     # check that no dates are lost
     for df in df_list: 
         assert np.sum(~df.index.isin(overall_df.index))==0
-    overall_df = overall_df[[c for c in overall_df.columns if c.split("-")[-1] in input_variables]]
+    overall_df = overall_df[[c for c in overall_df.columns if c.endswith(output_variable)]]
     overall_df.to_csv("/work/test-first-project/data/model-data/overall_cases.csv", index=False)
 
     # create sequences

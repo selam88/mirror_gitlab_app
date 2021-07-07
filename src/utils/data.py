@@ -70,19 +70,37 @@ def load_obj(name):
     with open(name, 'rb') as f:
         return pickle.load(f)
     
-def load_training_data(model_folder="/work/test-first-project/data/model-data/"):
+def load_training_data(folder="/work/test-first-project/data/model-data"):
     """
     load training data from hard-coded directory
     args:
-        model_folder(optional): (str)path to the folder containing saved data
+        folder(optional): (str)path to the folder containing saved data
     return: 
         input_seq: (numpy array) array of "input" multivariate sequences
         output_seq: (numpy array) array of "input" univariate sequences
         last_in_dates: (numpy array) array of index of the last timesteps from input sequences
         country_array: (numpy array) array of countries corresponding to the sequences 
     """
-    input_seq = load_obj(os.path.join(model_folder, "input_sequences.pkl"))
-    output_seq = load_obj(os.path.join(model_folder, "output_sequences.pkl"))
-    last_in_dates = load_obj(os.path.join(model_folder, "last_in_dates.pkl"))
-    country_array = load_obj(os.path.join(model_folder, "country.pkl"))
+    input_seq = load_obj(os.path.join(folder, "input_sequences.pkl"))
+    output_seq = load_obj(os.path.join(folder, "output_sequences.pkl"))
+    last_in_dates = load_obj(os.path.join(folder, "last_in_dates.pkl"))
+    country_array = load_obj(os.path.join(folder, "country.pkl"))
+    return input_seq, output_seq, last_in_dates, country_array
+
+def load_prediction_data(model_folder="/work/test-first-project/data/model-data/", 
+                         inference_folder="/work/test-first-project/data/inference-data"):
+    """
+    load predictions data from hard-coded directory
+    args:
+        model_folder(optional): (str)path to the folder containing saved data
+    return: 
+        predictions: (numpy array) array of predicted sequences
+        last_in_dates: (numpy array) array of index of the last timesteps from input sequences
+        country_array: (numpy array) array of countries corresponding to the sequences 
+        overall_df: (pandas DataFrame) overall dataframe of new cases 
+    """
+    predictions = load_obj(os.path.join(inference_folder, "predictions.pkl"))
+    last_in_dates = load_obj(os.path.join(inference_folder, "last_in_dates.pkl"))
+    country_array = load_obj(os.path.join(inference_folder, "country.pkl"))
+    overall_df = pd.read_csv(os.path.join(model_folder, "overall_cases.csv"))
     return input_seq, output_seq, last_in_dates, country_array
