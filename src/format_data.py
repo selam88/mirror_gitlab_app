@@ -30,16 +30,17 @@ def main(csv_folder,
         df = pd.read_csv(file, parse_dates=True, index_col=0)
         new_column_name = {k: "{0:s}-{1:s}".format(country, k).replace(" ", "_") for k in df.columns}
         df.rename(columns=new_column_name, inplace=True)
+        # if we choose to resample 
+        if not isinstance(resampling_rule, type(None)):
+            df = df.resample(resampling_rule).sum()
         df_list.append(df)
     overall_df = pd.concat(df_list, axis=1)
 
     # check that no dates are lost
     for df in df_list: 
         assert np.sum(~df.index.isin(overall_df.index))==0
-
-    # if we choose to resample 
-    if not isinstance(resampling_rule, type(None)):
-        overall_df = overall_df.resample(resampling_rule).sum()
+    overall_df = overall_df[[c for c in overall_df.columns if c.split("-")[-1] in input_variables]]
+    overall_df.to_csv("/work/test-first-project/data/model-data/overall_cases.csv", index=False)
 
     # create sequences
     for i, country_df in enumerate(df_list): 
