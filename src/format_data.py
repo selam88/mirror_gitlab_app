@@ -40,7 +40,7 @@ def main(csv_folder,
     for df in df_list: 
         assert np.sum(~df.index.isin(overall_df.index))==0
     overall_df = overall_df[[c for c in overall_df.columns if c.endswith(output_variable)]]
-    overall_df.to_csv("/work/test-first-project/data/model-data/overall_cases.csv", index=False)
+    overall_df.to_csv("/work/test-first-project/data/model-data/overall_cases.csv", index=True)
 
     # create sequences
     for i, country_df in enumerate(df_list): 
