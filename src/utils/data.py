@@ -102,5 +102,5 @@ def load_prediction_data(model_folder="/work/test-first-project/data/model-data/
     predictions = load_obj(os.path.join(inference_folder, "predictions.pkl"))
     last_in_dates = load_obj(os.path.join(inference_folder, "last_in_dates.pkl"))
     country_array = load_obj(os.path.join(inference_folder, "country.pkl"))
-    overall_df = pd.read_csv(os.path.join(model_folder, "overall_cases.csv"))
+    overall_df = pd.read_csv(os.path.join(model_folder, "overall_cases.csv"), index_col="Date", parse_dates=True)
     return predictions, last_in_dates, country_array, overall_df
