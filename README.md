@@ -19,11 +19,16 @@ through the use the [covid-daily python API](https://pypi.org/project/covid-dail
 
 The implementation of the project relys on 4 scripts which allow
 to aumatize specific parts of the project. This 4 application
-script, located in src/ are: 
+script, located in src/ are:
+ 
 	* download_data.py: download and store all available data from [Wordlometers](https://www.worldometers.info/coronavirus/)
+
 	* format_data.py: preprocess downloaded COVID data into trainable multivariates sequences
+
 	* train.py: train a model composed of LongShortTermMemory layers with parameters-adjustable architecture
+
 	* infer.py: apply inference and store the predictions to be displayed on the web app
+
 Lastly, the dashboarding application is defined within a dedicated app folder: src/streamlit_app
 
 ### Working with the peoject - Renku command automatization
