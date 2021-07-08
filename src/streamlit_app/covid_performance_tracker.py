@@ -18,8 +18,11 @@ header = st.beta_container()
 user_input = st.beta_container()
 output_graphs = st.beta_container()
 author_credits = st.beta_container()
+# Hard-coded path, specific to streamlit app sharing
+model_folder = "/app/mirror_gitlab_app/data/models/models_2/"
+training_folder = "/app/mirror_gitlab_app/data/model-data/"
+inference_folder = "/app/mirror_gitlab_app/data/inference-data/"
 # Load model 
-model_folder = "/work/test-first-project/data/models/models_2/"
 model = scaled_model(model_folder)
 
 with header:
@@ -34,8 +37,8 @@ with header:
     """)
 
 # Process predictions data
-predictions, last_in_dates, country_array, overall_df = load_prediction_data()
-input_seq, output_seq, _, _ = load_training_data()
+predictions, last_in_dates, country_array, overall_df = load_prediction_data(model_folder=training_folder, inference_folder=inference_folder)
+input_seq, output_seq, _, _ = load_training_data(folder=training_folder)
 datetime_index = [d for d in map(pd.to_datetime, last_in_dates)]
 data_dic = {"infered_array": [v.ravel() for v in predictions], "country": country_array}
 predictions_df = pd.DataFrame(data=data_dic, index=datetime_index)
