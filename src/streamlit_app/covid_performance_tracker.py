@@ -1,9 +1,9 @@
 import os, sys
 sys.path.append("../")
 sys.path.append("../../")
+from utils.data import load_prediction_data, load_training_data
 import pandas as pd
 import numpy as np
-from utils.data import load_prediction_data, load_training_data
 import streamlit as st 
 from datetime import timedelta
 import altair as alt
