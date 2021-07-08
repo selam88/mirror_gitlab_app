@@ -1,6 +1,6 @@
 import os, sys
-sys.path.append("/work/test-first-project/src")
-sys.path.append("test-first-project/src")
+sys.path.append("../")
+sys.path.append("../../")
 import pandas as pd
 import numpy as np
 from utils.data import load_prediction_data, load_training_data
