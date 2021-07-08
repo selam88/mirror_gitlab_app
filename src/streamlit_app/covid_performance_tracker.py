@@ -1,6 +1,8 @@
 import os, sys
 sys.path.append("../")
 sys.path.append("../../")
+sys.path.append("/app/mirror_gitlab_app/")
+sys.path.append("/app/mirror_gitlab_app/src")
 from utils.data import load_prediction_data, load_training_data
 import pandas as pd
 import numpy as np
@@ -10,6 +12,7 @@ import altair as alt
 from utils.train import *
 from copy import deepcopy
 from streamlit_app.dash_utils import *
+
 
 header = st.beta_container()
 user_input = st.beta_container()
