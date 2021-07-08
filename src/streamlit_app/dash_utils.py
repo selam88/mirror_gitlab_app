@@ -125,11 +125,12 @@ def get_focused_predictions_df(i, last_in_dates, input_seq, output_seq, predicti
 def get_noisy_focused_predictions_df(multi_seg_df_, percent_noise, in_seq, model):
     multi_seg_df = multi_seg_df_.copy()
     in_dim, out_dim = in_seq.shape[0], (~multi_seg_df["predictions"].isna()).sum()-1
-    max_noise = round((percent_noise/100.0)* np.max(in_seq[:, 1]))
+    max_noise = [round((percent_noise/100.0)* np.max(in_seq[:, i])) for i in [0, 1]]
     new_input_seq = deepcopy(in_seq)
-    noise = np.random.randint(-1*max_noise, max_noise, in_seq.shape[0])
-    new_input_seq[:,1] = new_input_seq[:,1] + noise
-    new_input_seq[new_input_seq[:,1]<0,1] = 0
+    noise = [np.random.randint(-1*max_noise[i], max_noise[i], in_seq.shape[0]) for i in [0, 1]]
+    for i in [0, 1]:
+        new_input_seq[:,i] = new_input_seq[:,i] + noise[i]
+        new_input_seq[new_input_seq[:,i]<0,i] = 0
     new_predictions = model.predict(new_input_seq[np.newaxis, :, :])
     multi_seg_df["noisy_predictions"] = np.concatenate([np.full((in_dim-1,), np.nan), np.array([new_input_seq[-1, 1]]), new_predictions[0, :, 0]])
     multi_seg_df["noisy inputs sequence"] = np.concatenate([new_input_seq[:, 1], np.full((out_dim,), np.nan)])

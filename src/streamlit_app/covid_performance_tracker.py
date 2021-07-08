@@ -37,13 +37,13 @@ datetime_index = [d for d in map(pd.to_datetime, last_in_dates)]
 data_dic = {"infered_array": [v.ravel() for v in predictions], "country": country_array}
 predictions_df = pd.DataFrame(data=data_dic, index=datetime_index)
 country_list = list(predictions_df.country.unique())
+displayed_country_list = [c.title() for c in country_list]
 
 with user_input:
     st.sidebar.header('User Selection') 
-    
     # Country widget
-    country = st.sidebar.selectbox('Select Your Country:',country_list) 
-    
+    country_ = st.sidebar.selectbox('Select Your Country:',displayed_country_list) 
+    country = country_.lower()
     # Date widget
     #date = st.sidebar.date_input("Select the date you want to check", min_value=predictions_df.index[0], max_value=predictions_df.index[-1])
     date = st.sidebar.slider("Select the date you want to check", 
@@ -85,6 +85,7 @@ with output_graphs:
     # Second chart : set error chart
     error_chart = get_second_chart(monthly_error_df, date_timest)
     error_chart
+    
     # third and forth chart note/explanation
     st.markdown("""
     The following pair of charts display the situation specific to the date and the country selected. The left chart shows the true input and output sequence (Daily New Cases), and the obtained predictions. 
@@ -93,6 +94,7 @@ with output_graphs:
     
     **Note:** You can change the amount of noise added to the input sequence, using the "User Selection" sidebar.
     """)
+    
     # Prepare third chart:  focus prediction chart
     selected_date_index = np.where(pd.to_datetime(country_l_i_d)==date_timest)[0][0]
     country_input = input_seq[country_array==country]
@@ -117,3 +119,5 @@ with author_credits:
 
     This application uses the [Streamlit package library](https://streamlit.io). Pleas find some more examples of Streamlit apps in the [official Streamlit gallery](https://streamlit.io/gallery) 
     """)
+
+
