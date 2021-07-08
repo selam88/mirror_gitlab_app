@@ -28,7 +28,7 @@ model = scaled_model(model_folder)
 with header:
     st.title("Welcome to the Covid-19 New cases Predictions Application")
     st.markdown("""
-    #### By: [Selim Amrari]( www.linkedin.com/in/sélim-amrari08/)
+    #### By: [Selim Amrari](https://www.linkedin.com/in/sélim-amrari08/)
     
     Welcome to the Covid-19 New cases Predictions tracker. This web application displays the daily number of new Covid-19 cases reported in the selected country as well as the prediction interval, since the beginning of the pandemic. This application also allows to display any predictions related to the selected date and the corresponding monthly average errors for each predicted timesteps.
 
@@ -119,7 +119,7 @@ with author_credits:
     st.markdown("""
     **Thank you for using my application!**
     
-    This dashboard has been devlopped thanks to the following [Covid-19-County-Tracker app](https://github.com/cerratom/Covid-19-County-Tracker) used as template.
+    This dashboard has been devlopped thanks to the following [Covid-19-County-Tracker app](https://github.com/cerratom/Covid-19-County-Tracker) used as template. Feel free to have a look on the original [dashboard app](https://share.streamlit.io/cerratom/covid-19-county-tracker/county.py)
     
     The dataset used to feed this application is provided by [Wordlometers](https://www.worldometers.info/coronavirus/) and ingested thanks to the [covid-daily python API](https://pypi.org/project/covid-daily/).
 
