@@ -11,15 +11,21 @@ as feature variables the COVID Daily Active Cases and the COVID Daily
 New Cases from the past 40 days. COVID Daily New Cases are predicted 
 up to 20 days next.
 
+This project is meant to be automaticaly updated on a regulat basis, 
+retrieving daily COVID data from the [Wordlometers](https://www.worldometers.info/coronavirus/) website
+through the use the [covid-daily python API](https://pypi.org/project/covid-daily/).
+
 ## Working with the project
 
-The simplest way to start your project is right from the Renku
-platform - just click on the `Environments` tab and start a new session.
-This will start an interactive environment right in your browser.
-
-To work with the project anywhere outside the Renku platform,
-click the `Settings` tab where you will find the
-git repo URLs - use `git` to clone the project on whichever machine you want.
+The implementation of the project relys on 4 scripts which allow
+to aumatize specific parts of the project. This 4 application
+script, located in src/ are: 
+Markup : 
+	- download_data.py: download and store all available data from [Wordlometers](https://www.worldometers.info/coronavirus/)
+	- format_data.py: preprocess downloaded COVID data into trainable multivariates sequences
+	- train.py: train a model composed of LongShortTermMemory layers with parameters-adjustable architecture
+	- infer.py: apply inference and store the predictions to be displayed on the web app
+Lastly, the dashboarding application is defined within a dedicated app folder: src/streamlit_app
 
 ### Changing interactive environment dependencies
 
