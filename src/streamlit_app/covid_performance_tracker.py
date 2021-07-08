@@ -3,7 +3,7 @@ sys.path.append("/work/test-first-project/src")
 import matplotlib.pyplot as plt 
 import pandas as pd
 import numpy as np
-from utils.data import load_prediction_data
+from utils.data import load_prediction_data, load_training_data
 import streamlit as st 
 from datetime import timedelta
 import altair as alt
@@ -33,8 +33,11 @@ def get_main_visualization_df(country, predictions, last_in_dates, country_array
         country_array: (numpy array) country name array of the predicted sequences
     returns:
         visualization_df: (pandas dataframe) dataframe with data to display
+        country_predictions: (numpy array) predicted sequences array of the selected country
+        country_last_in_dates: (numpy array) date array from the selected country 
+                                corresponding to the last "input" timesteps
     """
-     # set up prediction_df
+     # set up overall prediction_df for country
     predictions_dic = {"date":[], "value":[]}
     country_predictions = predictions[country_array==country]
     country_last_in_dates = last_in_dates[country_array==country]
@@ -53,7 +56,7 @@ def get_main_visualization_df(country, predictions, last_in_dates, country_array
     # merge measurement and predicitons
     visualization_df = pd.concat([country_df, interval_df], axis=1)
     visualization_df.reset_index(inplace=True)
-    return visualization_df
+    return visualization_df, country_predictions, country_last_in_dates
 
 def get_month_interval(date_timestamp):
     """
@@ -67,6 +70,46 @@ def get_month_interval(date_timestamp):
     start = date_timestamp - timedelta(days=date_timestamp.day-1)
     end = date_timestamp + timedelta(days=date_timestamp.daysinmonth-date_timestamp.day)
     return start, end
+
+def get_month_data(interval, country_pred, country_outputs, country_l_i_d):
+
+    """
+    return the predictions data corresponding to the selected interval
+    args:
+        interval: (Timestamp tuple) tuple of timestamp with period start and end
+        country_pred: (numpy array) predicted sequences array of the selected country
+        country_outputs: (numpy array) outputs sequences array of the selected country
+        country_l_i_d: (numpy array) date array from the selected country corresponding
+                        to the last "input" timesteps
+    return:
+        selected_pred: (numpy array) selected predicted sequences array
+        selected_l_i_d:  (numpy array) date array from the selected period
+        selected_outputs: (numpy array) selected outputs sequences array
+    """
+    start, end = interval
+    country_l_i_tmstp =  pd.to_datetime(country_l_i_d)
+    interval_ind = np.logical_and(country_l_i_tmstp>start, country_l_i_tmstp<end)
+    selected_pred = country_pred[interval_ind]
+    selected_l_i_d = country_l_i_d[interval_ind]
+    selected_outputs = country_outputs[interval_ind]
+    return selected_pred, selected_outputs, selected_l_i_d
+
+def get_error_dataframe(predictions, output_seq):
+    """
+    compute a monthly prediction error per timesteps
+    args:
+        predictions: (numpy array) array of predicted sequences
+        output_seq: (numpy array) array of outputs sequences
+    returns:
+        error_df: (pandas dataframe) dataframe of error
+    """
+    data_dic = {"Daily timestep": [], "error": [], "order":[]}
+    for i in range(predictions.shape[1]):
+        data_dic["error"].extend((predictions[:, i, :] - output_seq[:, i, :]).ravel())
+        data_dic["Daily timestep"].extend(np.full((predictions.shape[0],), i+1))
+        data_dic["order"].extend(np.full((predictions.shape[0],), i+1))
+    error_df = pd.DataFrame(data=data_dic)
+    return error_df
 
 header = st.beta_container()
 user_input = st.beta_container()
@@ -86,6 +129,7 @@ with header:
 
 # Process predictions data
 predictions, last_in_dates, country_array, overall_df = load_prediction_data()
+input_seq, output_seq, _, _ = load_training_data()
 datetime_index = [d for d in map(pd.to_datetime, last_in_dates)]
 data_dic = {"infered_array": [v.ravel() for v in predictions], "country": country_array}
 predictions_df = pd.DataFrame(data=data_dic, index=datetime_index)
@@ -112,18 +156,18 @@ with output_graphs:
     # set up country df
     country_df = get_country_cases(overall_df, country)
     # set up prediction_df
-    main_visualization_df = get_main_visualization_df(country, predictions, last_in_dates, country_array)
+    main_vis_df, country_pred, country_l_i_d = get_main_visualization_df(country, predictions, last_in_dates, country_array)
     # set up start, end of month
     start, end = get_month_interval(date_timest)
     cutoff = pd.DataFrame({'start': [start], 'stop': [end]})
     # Create plot for entire period
     # shaded area
-    area = alt.Chart(main_visualization_df).mark_area(opacity=0.5, color='#cb181d').encode(
+    area = alt.Chart(main_vis_df).mark_area(opacity=0.5, color='#cb181d').encode(
         x=alt.X('index', axis=alt.Axis(title='Date')),
         y=alt.Y('Min'), y2=alt.Y2('Max')
     ).properties(width=800, height=350).interactive()
     # main curve
-    line = alt.Chart(main_visualization_df).mark_line(color="#0868ac").encode(
+    line = alt.Chart(main_vis_df).mark_line(color="#0868ac").encode(
         x=alt.X('index', axis=alt.Axis(title='Date')),
         y='Daily new cases'
     ).properties(width=800, height=350).interactive()
@@ -143,6 +187,43 @@ with output_graphs:
     area+line+month_box
     
     # set error chart
+    country_outputs = output_seq[country_array==country]
+    selected_pred, selected_outputs, selected_l_i_d = get_month_data([start, end], country_pred,
+                                                      country_outputs, country_l_i_d)
+    monthly_error_df = get_error_dataframe(selected_pred, selected_outputs)
+    error_chart = alt.Chart(monthly_error_df).transform_density(
+        'error',
+        as_=['error', 'density'],
+        extent=[monthly_error_df.error.min() -100, monthly_error_df.error.max()+100],
+        groupby=['Daily timestep']
+    ).mark_area(orient='horizontal').encode(
+        y='error:Q',
+        color=alt.Color(
+            'Daily timestep:N',
+            scale=alt.Scale(scheme='plasma')),
+        x=alt.X(
+            'density:Q',
+            stack='center',
+            impute=None,
+            title=None,
+            axis=alt.Axis(labels=False, values=[0],grid=False, ticks=True),
+        ),
+        column=alt.Column(
+            'Daily timestep:N',
+            header=alt.Header(
+                titleOrient='bottom',
+                labelOrient='bottom',
+                labelPadding=0,
+            ),
+        )
+    ).properties(
+        width=35
+    ).configure_facet(
+        spacing=0
+    ).configure_view(
+        stroke=None
+    )
+    error_chart
     
     st.markdown("""**Note:** You can zoom on this graph if you are in front of a Desktop or Laptop by using your scrolling wheel on your mouse.""")
 
