@@ -124,7 +124,7 @@ with author_credits:
     
     The dataset used to feed this application is provided by [Wordlometers](https://www.worldometers.info/coronavirus/) and ingested thanks to the [covid-daily python API](https://pypi.org/project/covid-daily/).
 
-    This application uses the [Streamlit package library](https://streamlit.io). Pleas find some more examples of Streamlit apps in the [official Streamlit gallery](https://streamlit.io/gallery) 
+    This application uses the [Streamlit package library](https://streamlit.io). Please find some more examples of Streamlit apps in the [official Streamlit gallery](https://streamlit.io/gallery) 
     """)
 
 

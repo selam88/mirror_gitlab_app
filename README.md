@@ -1,15 +1,15 @@
 # Welcome to the Covid-19 New cases Predictions Application
 
-FEEL FREE TO DICOSVER THE [APP](https://share.streamlit.io/selam88/mirror_gitlab_app/src/streamlit_app/covid_performance_tracker.py)
+**FEEL FREE TO DICOSVER THE [APP](https://share.streamlit.io/selam88/mirror_gitlab_app/src/streamlit_app/covid_performance_tracker.py)**
 
 ## Introduction
 
 The purpose of this project is to build a dashboarding application 
 allowing to browse COVID Daily New Cases predictions back in time. 
-The predictions are based on multi-timesteps predictions model, taking
+The predictions are based on a multi-timesteps prediction model, taking
 as feature variables the COVID Daily Active Cases and the COVID Daily
 New Cases from the past 40 days. COVID Daily New Cases are predicted 
-up to the 20 following days. 
+up to 20 days next.
 
 ## Working with the project
 
@@ -36,7 +36,12 @@ the default type of environment to open, in this case `/lab` for
 JupyterLab. You may also choose `/tree` to get to the "classic" Jupyter
 interface.
 
-## Moving forward
+## credits
 
-Once you feel at home with your project, we recommend that you replace
-this README file with your own project documentation! Happy data wrangling!
+**Thank you for using my application!**
+    
+This dashboard has been devlopped thanks to the following [Covid-19-County-Tracker app](https://github.com/cerratom/Covid-19-County-Tracker) used as template. Feel free to have a look on the original [dashboard app](https://share.streamlit.io/cerratom/covid-19-county-tracker/county.py)
+    
+The dataset used to feed this application is provided by [Wordlometers](https://www.worldometers.info/coronavirus/) and ingested thanks to the [covid-daily python API](https://pypi.org/project/covid-daily/).
+
+This application uses the [Streamlit package library](https://streamlit.io). Please find some more examples of Streamlit apps in the [official Streamlit gallery](https://streamlit.io/gallery) 
