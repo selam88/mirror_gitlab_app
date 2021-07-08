@@ -20,19 +20,14 @@ through the use the [covid-daily python API](https://pypi.org/project/covid-dail
 The implementation of the project relys on 4 scripts which allow
 to aumatize specific parts of the project. This 4 application
 script, located in src/ are: 
-Markup : 
-	- download_data.py: download and store all available data from [Wordlometers](https://www.worldometers.info/coronavirus/)
-	- format_data.py: preprocess downloaded COVID data into trainable multivariates sequences
-	- train.py: train a model composed of LongShortTermMemory layers with parameters-adjustable architecture
-	- infer.py: apply inference and store the predictions to be displayed on the web app
+	* download_data.py: download and store all available data from [Wordlometers](https://www.worldometers.info/coronavirus/)
+	* format_data.py: preprocess downloaded COVID data into trainable multivariates sequences
+	* train.py: train a model composed of LongShortTermMemory layers with parameters-adjustable architecture
+	* infer.py: apply inference and store the predictions to be displayed on the web app
 Lastly, the dashboarding application is defined within a dedicated app folder: src/streamlit_app
 
-### Changing interactive environment dependencies
+### Working with the peoject - Renku command automatization
 
-Initially we install a very minimal set of packages to keep the images small.
-However, you can add python and conda packages in `requirements.txt` and
-`environment.yml` to your heart's content. If you need more fine-grained
-control over your environment, please see [the documentation](https://renku.readthedocs.io/en/latest/user/advanced_interfaces.html#dockerfile-modifications).
 
 ## Project configuration
 
