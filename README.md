@@ -1,13 +1,15 @@
-# Test - first project
+# Welcome to the Covid-19 New cases Predictions Application
 
-Test - first project
+FEEL FREE TO DICOSVER THE [APP](https://share.streamlit.io/selam88/mirror_gitlab_app/src/streamlit_app/covid_performance_tracker.py)
 
 ## Introduction
 
-This is a Renku project - basically a git repository with some
-bells and whistles. You'll find we have already created some
-useful things like `data` and `notebooks` directories and
-a `Dockerfile`.
+The purpose of this project is to build a dashboarding application 
+allowing to browse COVID Daily New Cases predictions back in time. 
+The predictions are based on multi-timesteps predictions model, taking
+as feature variables the COVID Daily Active Cases and the COVID Daily
+New Cases from the past 40 days. COVID Daily New Cases are predicted 
+up to the 20 following days. 
 
 ## Working with the project
 
