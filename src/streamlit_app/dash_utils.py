@@ -111,6 +111,17 @@ def get_error_dataframe(predictions, output_seq):
     return error_df
 
 def get_focused_predictions_df(i, last_in_dates, input_seq, output_seq, predictions):
+    """
+    Build the DataFrame contaning input, output, predicted sequences to plot
+    args:
+        i: (int) index of the date to plot
+        input_seq: (numpy array) array of input sequences
+        output_seq: (numpy array) array of input sequences
+        last_in_dates: (numpy array) date array corresponding to the last "input" timesteps
+        predictions: (numpy array) array of predicted sequences
+    returns:
+        data_df: (pandas DataFrame) contaning input, output, predicted sequences to plot
+    """
     current_date = pd.to_datetime(last_in_dates[i])
     in_dim, out_dim = input_seq.shape[1], output_seq.shape[1]
     dates = pd.date_range(start=current_date-timedelta(days=in_dim-1),
@@ -123,6 +134,15 @@ def get_focused_predictions_df(i, last_in_dates, input_seq, output_seq, predicti
     return data_df
 
 def get_noisy_focused_predictions_df(multi_seg_df_, percent_noise, in_seq, model):
+    """
+    Build the DataFrame contaning input, output, predicted sequences as well as
+    the noisy input and predicted sequences to plot.
+    args:
+        data_df: (pandas DataFrame) contaning input, output, predicted sequences to plot
+        percent_noise: (int) percentage of noise to add to the input sequences
+        in_seq: (numpy array) array of the UNIQUE input sequence to infer
+        model: (scaled model) model instance to use for inference
+        predi"""
     multi_seg_df = multi_seg_df_.copy()
     in_dim, out_dim = in_seq.shape[0], (~multi_seg_df["predictions"].isna()).sum()-1
     max_noise = [round((percent_noise/100.0)* np.max(in_seq[:, i])) for i in [0, 1]]
@@ -137,6 +157,19 @@ def get_noisy_focused_predictions_df(multi_seg_df_, percent_noise, in_seq, model
     return multi_seg_df
 
 def get_first_chart(main_vis_df, country, cutoff):
+    """
+    Create overall country predictions/situation graph
+    args:
+        main_vis_df: (pandas DataFrame) Dataframe of value to display 
+                     with "Daily new cases", "min" and "max" attributes
+                     "min" and "max" attribute translate the interval
+                     of predictions
+        country: (str) Name of the country to display
+        cutoo: (pandas Dataframe) Dataframe with cutoff value defining 
+                the monthly selected interval
+    return:
+        altair.chart
+    """
     area = alt.Chart(main_vis_df).mark_area(opacity=0.5, color='#cb181d').encode(
         x=alt.X('index', axis=alt.Axis(title='Date')),
         y=alt.Y('Min'), y2=alt.Y2('Max')
@@ -163,6 +196,15 @@ def get_first_chart(main_vis_df, country, cutoff):
     return area+line+month_box
 
 def get_second_chart(monthly_error_df, date_timestamp):
+    """
+    Create violin plots of average monthly errors per timesteps
+    args:
+        monthly_error_df: (pandas DataFrame) Dataframe of value to display 
+                        with "Error" and "Daily timesteps" attributes
+        date_timestamp: (pandas Timestamp) Timestamp date of the predictions
+    return:
+        altair.chart
+    """
     error_chart = alt.Chart(monthly_error_df).transform_density(
         'error',
         as_=['error', 'density'],
@@ -200,6 +242,14 @@ def get_second_chart(monthly_error_df, date_timestamp):
     return error_chart
 
 def get_third_chart(multi_seg_df):
+    """
+    Create multi-time serie line graph
+    args:
+        multi_seg_df: (pandas DataFrame) Dataframe of value to display 
+                       with "Date", "Daily new cases" and "Category" attributes
+    return:
+        altair.chart
+    """
     third_chart = alt.Chart(multi_seg_df).mark_line().encode(
         x='Date',
         y='Daily new cases',
