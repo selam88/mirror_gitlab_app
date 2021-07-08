@@ -97,8 +97,6 @@ with output_graphs:
     The following pair of charts display the situation specific to the date and the country selected. The left chart shows the true input and output sequence (Daily New Cases), and the obtained predictions. 
     
     The chart on the right side is aimed at evaluating the model stability. To this end, a specific amount of random noise is addded to the input sequence before triggering the predictions again. The chart allows to visualize the "Noisy" input sequence and to compare the "Noisy" predicted sequence with the original one.
-    
-    **Note:** You can change the amount of noise added to the input sequence, using the "User Selection" sidebar.
     """)
     
     # Prepare third chart:  focus prediction chart
@@ -113,6 +111,9 @@ with output_graphs:
     noisy_seg_df.rename(columns=renaming, inplace=True)
     third_chart, forth_chart = get_third_chart(multi_seg_df), get_third_chart(noisy_seg_df)
     third_chart | forth_chart
+    st.markdown("""
+    **Note:** You can change the amount of noise added to the input sequence, using the "User Selection" sidebar.
+    """)
     
 with author_credits:
     st.header(f'Credits')
