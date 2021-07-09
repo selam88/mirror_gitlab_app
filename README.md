@@ -38,6 +38,8 @@ Lastly, the dashboarding application is defined within a dedicated app folder: s
 You can update the data which are displayed on the dashboard by running the following command: 
 
 	* bash src/bash_sc/update_data.sh
+
+		(:exclamation: renku practices : renku rerun data/inference-data :arrow_right: under maintenance)
    
 it will automatically download, format, and infer new available data.
 
