@@ -10,6 +10,7 @@ import altair as alt
 from utils.train import *
 from copy import deepcopy
 from streamlit_app.dash_utils import *
+from streamlit_app.chart_library import *
 
 
 header = st.beta_container()
@@ -74,7 +75,7 @@ with output_graphs:
     start, end = get_month_interval(date_timest)
     cutoff = pd.DataFrame({'start': [start], 'stop': [end]})
     # First chart : Create plot for entire period
-    first_chart = get_first_chart(main_vis_df, country, cutoff)
+    first_chart = get_first_chart(main_vis_df, country, cutoff, date_timest)
     first_chart
     # first and second chart note/explanation
     st.markdown("""
@@ -109,7 +110,7 @@ with output_graphs:
     renaming = {"level_0":"Date", "level_1":"Category", 0:"Daily new cases"}
     multi_seg_df.rename(columns=renaming, inplace=True)
     noisy_seg_df.rename(columns=renaming, inplace=True)
-    third_chart, forth_chart = get_third_chart(multi_seg_df), get_third_chart(noisy_seg_df)
+    third_chart, forth_chart = get_third_chart(multi_seg_df, date_timest), get_third_chart(noisy_seg_df, date_timest)
     third_chart | forth_chart
     st.markdown("""
     **Note:** You can change the amount of noise added to the input sequence, using the "User Selection" sidebar.
