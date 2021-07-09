@@ -1,3 +1,6 @@
+data/inference-data:
+  38d5f25caeaf0b1b0b7c1ea7ed085bfb403ac9e5:
+  - .renku/workflow/f205e542975b4d17a19c483146bdf0f0_python3.yaml
 data/model-data:
   1256534e1bb192f1abd0c1053e8b8f17afd6d77f:
   - .renku/workflow/efc79d8265f143ebb9fe54cc03df4b22_python3.yaml
