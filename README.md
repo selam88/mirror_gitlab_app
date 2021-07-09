@@ -1,6 +1,6 @@
 # Welcome to the Covid-19 New cases Predictions Application
 
-
+![Alt text](https://renkulab.io/gitlab/selim.amrari.pro/test-first-project/-/raw/master/doc/stream_app_large.gif)
 
 **FEEL FREE TO DICOSVER THE [APP](https://share.streamlit.io/selam88/mirror_gitlab_app/src/streamlit_app/covid_performance_tracker.py)**
 
