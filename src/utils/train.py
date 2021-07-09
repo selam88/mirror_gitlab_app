@@ -35,6 +35,19 @@ def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
     model.compile(loss='mse', optimizer='adam')
     return model
 
+def has_same_units(model_path, model):
+    """
+    Check new model as same number of units with the old recorded one
+    args:
+        model_path: (str) path to the recorded model to overwritte
+        model: (tensor sequential) new model to save
+    return: 
+        (bool): True if number of unit correspond
+    """
+    old_units = load_model(model_path).get_layer(index=0).units
+    new_units = model.get_layer(index=0).units
+    return old_units==new_units
+
 def save_model_score(folder_path, model, scaler=None):
     """
     save model in a dedicated folder. Records fitting history as csv.
@@ -47,6 +60,9 @@ def save_model_score(folder_path, model, scaler=None):
     if not os.path.exists(folder_path): 
         os.mkdir(folder_path)
     model_path = os.path.join(folder_path, "model")
+    if os.path.isdir(model_path):
+        if not has_same_units(model_path, model):
+            raise RuntimeError("The specified number of units do not correspond to the model to retrain.")
     csv_path = os.path.join(folder_path, "score.csv")
     model.save(model_path, overwrite=True, include_optimizer=True)
     df = pd.DataFrame(model.history.history)
@@ -57,6 +73,7 @@ def save_model_score(folder_path, model, scaler=None):
     df.to_csv(csv_path, index=False)  
     if not isinstance(scaler, type(None)):
         save_obj(scaler, os.path.join(folder_path, "scaler.pkl"))
+    print("Successfully saved model and dependency")
     return
 
 def scale_data(X_seq_, Y_seq_=None, scaler=None, target_id=1):
