@@ -1,5 +1,7 @@
 # Welcome to the Covid-19 New cases Predictions Application
 
+
+
 **FEEL FREE TO DICOSVER THE [APP](https://share.streamlit.io/selam88/mirror_gitlab_app/src/streamlit_app/covid_performance_tracker.py)**
 
 ## Introduction
@@ -33,6 +35,15 @@ Lastly, the dashboarding application is defined within a dedicated app folder: s
 
 ### Working with the peoject - Renku command automatization
 
+You can update the data which are displayed on the dashboard by running the following command: 
+	* bash src/bash_sc/update_data.sh
+   
+it will automatically download, format, and infer new available data.
+
+You can retrain the model with new available data by running the following command: 
+	* bash src/bash_sc/update_and_retrain.sh
+   
+it will automatically download, format, re-train and infer new available data.
 
 ## Project configuration
 
