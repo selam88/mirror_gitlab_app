@@ -1,0 +1,15 @@
+data/inference-data:
+  38d5f25caeaf0b1b0b7c1ea7ed085bfb403ac9e5:
+  - .renku/workflow/fa961c9b4a43407d8b400aa27d80db78_python3.yaml
+data/model-data:
+  ee7a8610602320cf0ae5270b141571b3c9921c86:
+  - .renku/workflow/35dc7e2326c64093ad1f5e004b807c0f_python3.yaml
+  - .renku/workflow/a20b8cbcb6364f319d10488fbc17dac9_python3.yaml
+data/worldometers-data:
+  0bb9791a89fae9f61eeda970b915430779c12c24:
+  - .renku/workflow/445860fe20e54b61abad3f0ebfea1886_rerun.yaml
+  f7dc4a40465ae16a2496c85651c6a2707e81da67:
+  - .renku/workflow/1492539c4a754ce2900d47f6f9395759_rerun.yaml
+  - .renku/workflow/508a0183c9184dc0bca7ce2a6a9f69ad_python3.yaml
+  fae26eba6efe5198762bb10ca872e4afbceff6bd:
+  - .renku/workflow/e61b7c98614a4c20a711891a21de4c46_python3.yaml
