@@ -94,7 +94,7 @@ def get_second_chart(monthly_error_df, date_timestamp):
     )
     return error_chart
 
-def get_third_chart(multi_seg_df, date_timest):
+def get_third_chart(multi_seg_df, date_timest, noisy=False):
     """
     Create multi-time serie line graph
     args:
@@ -104,13 +104,17 @@ def get_third_chart(multi_seg_df, date_timest):
     return:
         altair.chart
     """
+    if noisy:
+        title_="Predicted noisy sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
+    else:
+        title_="Predicted sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
     third_chart = alt.Chart(multi_seg_df).mark_line().encode(
         x='Date',
         y='Daily new cases',
         color='Category',
         strokeDash='Category',
+    ).properties(title=title_
     ).interactive()
     vertical_line = alt.Chart(pd.DataFrame(data={"vert_line":[date_timest]})).mark_rule(strokeDash=[5,5]).encode(
     x='vert_line', color=alt.ColorValue('#4c78a8'), size=alt.value(1.5))
-    return (third_chart + vertical_line).properties(title="Predicted sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
-    )
+    return third_chart + vertical_line
