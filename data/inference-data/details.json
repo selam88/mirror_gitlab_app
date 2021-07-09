@@ -1,0 +1,43 @@
+{
+    "n_units": [
+        80
+    ],
+    "in_timesteps": [
+        40
+    ],
+    "out_timesteps": [
+        20
+    ],
+    "n_features": [
+        2
+    ],
+    "training_data": {
+        "formatting_date": [
+            "2021-07-05"
+        ],
+        "downloading_date": [
+            "2021-07-05"
+        ],
+        "countries": [
+            "australia",
+            "austria",
+            "brazil",
+            "canada",
+            "china",
+            "denmark",
+            "finland",
+            "france",
+            "germany",
+            "iceland",
+            "iran",
+            "israel",
+            "italy",
+            "panama",
+            "poland",
+            "turkey"
+        ]
+    },
+    "processing_date": [
+        "2021-07-09"
+    ]
+}
