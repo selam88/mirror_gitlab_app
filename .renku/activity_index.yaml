@@ -1,0 +1,6 @@
+data/worldometers-data:
+  247cda649a99a3e9b24c5c6b1323f20903f74e25:
+  - .renku/workflow/08305ef9033d473f8b40f51282d636a3_python3.yaml
+data/worldometers-data/italy.csv:
+  247cda649a99a3e9b24c5c6b1323f20903f74e25:
+  - .renku/workflow/08305ef9033d473f8b40f51282d636a3_python3.yaml
