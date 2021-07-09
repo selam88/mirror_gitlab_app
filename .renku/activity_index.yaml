@@ -1,3 +1,6 @@
+data/model-data:
+  2992d74f8b6f0320f9fe4ba324be73f95c9b5836:
+  - .renku/workflow/a6ffa6b6888f4df0917aefa4b349448f_python3.yaml
 data/worldometers-data:
   4230d18961281cd126c40a8752f607731f36ad0e:
   - .renku/workflow/c3f6160db8a94806a360edf9f94297f2_python3.yaml
