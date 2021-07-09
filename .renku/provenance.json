@@ -1,0 +1,1695 @@
+[
+  {
+    "@id": "_:b0",
+    "@type": [
+      "http://schema.org/Collection"
+    ],
+    "http://schema.org/hasPart": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9"
+      },
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1"
+      },
+      {
+        "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#WorkflowEngine",
+      "http://www.w3.org/ns/prov#SoftwareAgent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "renku 0.15.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-07-09T15:34:28+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+        "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/association"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedUsage": [
+      {
+        "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/usage/e0f03664-d51f-4294-bc8a-79b5e73c9c76/7fe34ef78e001e6a2b016fe6ce09ae62a851237d/src/infer.py"
+      },
+      {
+        "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/usage/0405ce5e-f4d3-4f78-ac0c-5f44affd62ea/b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75/data/model-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#startedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-07-09T15:34:28+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "mailto:selim.amrari.pro@protonmail.ch"
+      },
+      {
+        "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#order": [
+      {
+        "@value": 3
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/association",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+        "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+        "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/generation/b9837159-a59f-446f-9b29-967709f32376/b0666e989519ec14303936d4ff583aa78c6a98b4/data/inference-data",
+    "@type": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "http://www.w3.org/ns/prov#activity": [
+      {
+        "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "outputs/1e676b14d94145188f1e3639c2284812"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/usage/0405ce5e-f4d3-4f78-ac0c-5f44affd62ea/b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75/data/model-data",
+    "@type": [
+      "http://www.w3.org/ns/prov#Usage"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+        "@id": "https://renkulab.io/blob/b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75/data/model-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "inputs/403cc095acbb41cdaf2a68005939838c"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/usage/e0f03664-d51f-4294-bc8a-79b5e73c9c76/7fe34ef78e001e6a2b016fe6ce09ae62a851237d/src/infer.py",
+    "@type": [
+      "http://www.w3.org/ns/prov#Usage"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+        "@id": "https://renkulab.io/blob/7fe34ef78e001e6a2b016fe6ce09ae62a851237d/src/infer.py"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "inputs/1"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-07-09T15:31:44+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/association"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedUsage": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/usage/70e8159b-e708-4a4a-8a92-af4edb14a666/ab142a6670a7cd4f598e98fc5cfe5bce48900185/src/download_data.py"
+      }
+    ],
+    "http://www.w3.org/ns/prov#startedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-07-09T15:31:44+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "mailto:selim.amrari.pro@protonmail.ch"
+      },
+      {
+        "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#order": [
+      {
+        "@value": 1
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/association",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+        "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+        "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/generation/50fcba51-993f-44f3-89e5-b8e2cadc5e02/2eb3e1a5b0b867592bafb61f2651ba749bb9b692/data/worldometers-data/italy.csv",
+    "@type": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "http://www.w3.org/ns/prov#activity": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "outputs/a730d7ccb7ce403aa037ad32f3f7bd55"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/generation/c4821b41-e4fe-45ba-9deb-da1b519fe288/e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5/data/worldometers-data",
+    "@type": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "http://www.w3.org/ns/prov#activity": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "outputs/c276dbc65ca54872b49f76396475bcae"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/usage/70e8159b-e708-4a4a-8a92-af4edb14a666/ab142a6670a7cd4f598e98fc5cfe5bce48900185/src/download_data.py",
+    "@type": [
+      "http://www.w3.org/ns/prov#Usage"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+        "@id": "https://renkulab.io/blob/ab142a6670a7cd4f598e98fc5cfe5bce48900185/src/download_data.py"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "inputs/1"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-07-09T15:34:27+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/association"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedUsage": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/usage/f03b3d05-265d-40c5-b9ea-80368c6c7520/53644495fd93c02a4338e30cef25ce8e56f79347/src/format_data.py"
+      },
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/usage/a0898d27-3cf2-4f03-acf3-ed840ffebff5/e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5/data/worldometers-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#startedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-07-09T15:34:27+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "mailto:selim.amrari.pro@protonmail.ch"
+      },
+      {
+        "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#order": [
+      {
+        "@value": 2
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/association",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+        "@id": "https://github.com/swissdatasciencecenter/renku-python/tree/v0.15.1"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+        "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/generation/6c0a4afc-1c4f-4f01-8e0a-1decf3529973/36cba4ef4bfc59971b5e7b50b67dbf3eb267de1a/data/model-data/output_sequences.pkl",
+    "@type": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "http://www.w3.org/ns/prov#activity": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "outputs/19ff6e2b75fe4736a6337ba68a24a094"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/generation/c4ad61bf-74dd-4896-98bd-65f21ca89b95/72e6987f0969b617edfc64ed1cab19283b993d4c/data/model-data/overall_cases.csv",
+    "@type": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "http://www.w3.org/ns/prov#activity": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "outputs/0de29a3fe4464a449ca937e55e2de3a9"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/generation/d1680ab0-3881-4a97-ac9b-de643800b56a/b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75/data/model-data",
+    "@type": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "http://www.w3.org/ns/prov#activity": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "outputs/c045700f5515475eb8dc2a345596b837"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/usage/a0898d27-3cf2-4f03-acf3-ed840ffebff5/e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5/data/worldometers-data",
+    "@type": [
+      "http://www.w3.org/ns/prov#Usage"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+        "@id": "https://renkulab.io/blob/e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5/data/worldometers-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "inputs/4c5f41811c584371928756cc398c8efe"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/usage/f03b3d05-265d-40c5-b9ea-80368c6c7520/53644495fd93c02a4338e30cef25ce8e56f79347/src/format_data.py",
+    "@type": [
+      "http://www.w3.org/ns/prov#Usage"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+        "@id": "https://renkulab.io/blob/53644495fd93c02a4338e30cef25ce8e56f79347/src/format_data.py"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadRole": [
+      {
+        "@value": "inputs/1"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/05e2ed7dd80d2f5c06b292a611871be0b09b4e4f/data/model-data/country.pkl",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data/country.pkl@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data/country.pkl"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "05e2ed7dd80d2f5c06b292a611871be0b09b4e4f"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/2eb3e1a5b0b867592bafb61f2651ba749bb9b692/data/worldometers-data/italy.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/italy.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/italy.csv"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedGeneration": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/generation/50fcba51-993f-44f3-89e5-b8e2cadc5e02/2eb3e1a5b0b867592bafb61f2651ba749bb9b692/data/worldometers-data/italy.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "2eb3e1a5b0b867592bafb61f2651ba749bb9b692"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/2f0c580e2e40bde1e519bea4940dd70844d4c627/data/model-data/last_in_dates.pkl",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data/last_in_dates.pkl@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data/last_in_dates.pkl"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "2f0c580e2e40bde1e519bea4940dd70844d4c627"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/36cba4ef4bfc59971b5e7b50b67dbf3eb267de1a/data/model-data/output_sequences.pkl",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data/output_sequences.pkl@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data/output_sequences.pkl"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedGeneration": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/generation/6c0a4afc-1c4f-4f01-8e0a-1decf3529973/36cba4ef4bfc59971b5e7b50b67dbf3eb267de1a/data/model-data/output_sequences.pkl"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "36cba4ef4bfc59971b5e7b50b67dbf3eb267de1a"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/3b3bdfcb4994a7c0421ff8f308f5e99b6d9230bf/data/model-data/details.json",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data/details.json@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data/details.json"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "3b3bdfcb4994a7c0421ff8f308f5e99b6d9230bf"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/448935b32dd645daa8763952d2e008b4831f97f2/data/worldometers-data/canada.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/canada.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/canada.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "448935b32dd645daa8763952d2e008b4831f97f2"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/53644495fd93c02a4338e30cef25ce8e56f79347/src/format_data.py",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "src/format_data.py@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "src/format_data.py"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "53644495fd93c02a4338e30cef25ce8e56f79347"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/55122d0c3c4cc0538f4458c7e39e8447b11a21af/data/worldometers-data/iceland.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/iceland.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/iceland.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "55122d0c3c4cc0538f4458c7e39e8447b11a21af"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/58d20cf4b121814c4cc7ff448db3f5866dde9f82/data/worldometers-data/turkey.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/turkey.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/turkey.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "58d20cf4b121814c4cc7ff448db3f5866dde9f82"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/5b654c328f76e80633411f8296ce7685cb953a07/data/worldometers-data/denmark.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/denmark.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/denmark.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "5b654c328f76e80633411f8296ce7685cb953a07"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/61f3d2b3907e022439348c9cd3826157a0a7ce8f/data/worldometers-data/austria.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/austria.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/austria.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "61f3d2b3907e022439348c9cd3826157a0a7ce8f"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/6ab075940a913bdb38e6bea0834c2de2d145bd78/data/model-data/input_sequences.pkl",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data/input_sequences.pkl@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data/input_sequences.pkl"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "6ab075940a913bdb38e6bea0834c2de2d145bd78"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/6e1c8c4effd7723b6bc4182c38913af6296b4470/data/worldometers-data/israel.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/israel.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/israel.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "6e1c8c4effd7723b6bc4182c38913af6296b4470"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/72e6987f0969b617edfc64ed1cab19283b993d4c/data/model-data/overall_cases.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data/overall_cases.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data/overall_cases.csv"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedGeneration": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/generation/c4ad61bf-74dd-4896-98bd-65f21ca89b95/72e6987f0969b617edfc64ed1cab19283b993d4c/data/model-data/overall_cases.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "72e6987f0969b617edfc64ed1cab19283b993d4c"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/77c7baf46d64885cec26da73e4f0ced91a67e9ce/data/worldometers-data/finland.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/finland.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/finland.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "77c7baf46d64885cec26da73e4f0ced91a67e9ce"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/7fe34ef78e001e6a2b016fe6ce09ae62a851237d/src/infer.py",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "src/infer.py@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "src/infer.py"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "7fe34ef78e001e6a2b016fe6ce09ae62a851237d"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/8ac0452208976823dc6f5d1f08964c0a448d096c/data/worldometers-data/france.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/france.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/france.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "8ac0452208976823dc6f5d1f08964c0a448d096c"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/9abef64a03109929f2ecee046d0c3d6357be9309/data/worldometers-data/brazil.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/brazil.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/brazil.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "9abef64a03109929f2ecee046d0c3d6357be9309"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/9bcac0157a9ec2bdf87ef7357c0a7318cf270f4b/data/worldometers-data/details.json",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/details.json@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/details.json"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "9bcac0157a9ec2bdf87ef7357c0a7318cf270f4b"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/ab142a6670a7cd4f598e98fc5cfe5bce48900185/src/download_data.py",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "src/download_data.py@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "src/download_data.py"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "ab142a6670a7cd4f598e98fc5cfe5bce48900185"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/acb75ca57c6b62ed4704cf785987606991af63f0/data/worldometers-data/australia.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/australia.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/australia.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "acb75ca57c6b62ed4704cf785987606991af63f0"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/adc639b6b7ecfd84236ed2c953c77caba817b157/data/worldometers-data/germany.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/germany.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/germany.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "adc639b6b7ecfd84236ed2c953c77caba817b157"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/b0666e989519ec14303936d4ff583aa78c6a98b4/data/inference-data",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Collection",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/inference-data@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/inference-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadMember": [
+      {
+        "@id": "https://renkulab.io/blob/fc754aef88fa5d2abc616b7daaef8dd354727686/data/inference-data/details.json"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedGeneration": [
+      {
+        "@id": "https://renkulab.io/activities/12a93d74-d7e7-4cec-97ea-a610b0905e14/generation/b9837159-a59f-446f-9b29-967709f32376/b0666e989519ec14303936d4ff583aa78c6a98b4/data/inference-data"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "b0666e989519ec14303936d4ff583aa78c6a98b4"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75/data/model-data",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Collection",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/model-data@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/model-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadMember": [
+      {
+        "@id": "https://renkulab.io/blob/36cba4ef4bfc59971b5e7b50b67dbf3eb267de1a/data/model-data/output_sequences.pkl"
+      },
+      {
+        "@id": "https://renkulab.io/blob/72e6987f0969b617edfc64ed1cab19283b993d4c/data/model-data/overall_cases.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/3b3bdfcb4994a7c0421ff8f308f5e99b6d9230bf/data/model-data/details.json"
+      },
+      {
+        "@id": "https://renkulab.io/blob/2f0c580e2e40bde1e519bea4940dd70844d4c627/data/model-data/last_in_dates.pkl"
+      },
+      {
+        "@id": "https://renkulab.io/blob/6ab075940a913bdb38e6bea0834c2de2d145bd78/data/model-data/input_sequences.pkl"
+      },
+      {
+        "@id": "https://renkulab.io/blob/05e2ed7dd80d2f5c06b292a611871be0b09b4e4f/data/model-data/country.pkl"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedGeneration": [
+      {
+        "@id": "https://renkulab.io/activities/a3b20d9f-17a0-4ad0-b827-ba7b385e4fd1/generation/d1680ab0-3881-4a97-ac9b-de643800b56a/b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75/data/model-data"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "b4ee6e1b20bfeb19287e32b21bbbb4ac6fb0bb75"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/b8e944f77e0f5340d40f83d6c78188177ec6bc11/data/worldometers-data/iran.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/iran.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/iran.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "b8e944f77e0f5340d40f83d6c78188177ec6bc11"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/c0785e3b2cd4c9007e35adb215380a7213134910/data/worldometers-data/panama.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/panama.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/panama.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "c0785e3b2cd4c9007e35adb215380a7213134910"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/dff3a927a803d1b02087fd678370dd25cb352e77/data/worldometers-data/china.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/china.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/china.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "dff3a927a803d1b02087fd678370dd25cb352e77"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/e09b033c7d7b58d0941fe62235401e1fe9150e51/data/worldometers-data/poland.csv",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data/poland.csv@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data/poland.csv"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "e09b033c7d7b58d0941fe62235401e1fe9150e51"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5/data/worldometers-data",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Collection",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/worldometers-data@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/worldometers-data"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadMember": [
+      {
+        "@id": "https://renkulab.io/blob/2eb3e1a5b0b867592bafb61f2651ba749bb9b692/data/worldometers-data/italy.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/e09b033c7d7b58d0941fe62235401e1fe9150e51/data/worldometers-data/poland.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/acb75ca57c6b62ed4704cf785987606991af63f0/data/worldometers-data/australia.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/b8e944f77e0f5340d40f83d6c78188177ec6bc11/data/worldometers-data/iran.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/9bcac0157a9ec2bdf87ef7357c0a7318cf270f4b/data/worldometers-data/details.json"
+      },
+      {
+        "@id": "https://renkulab.io/blob/448935b32dd645daa8763952d2e008b4831f97f2/data/worldometers-data/canada.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/5b654c328f76e80633411f8296ce7685cb953a07/data/worldometers-data/denmark.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/8ac0452208976823dc6f5d1f08964c0a448d096c/data/worldometers-data/france.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/55122d0c3c4cc0538f4458c7e39e8447b11a21af/data/worldometers-data/iceland.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/9abef64a03109929f2ecee046d0c3d6357be9309/data/worldometers-data/brazil.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/58d20cf4b121814c4cc7ff448db3f5866dde9f82/data/worldometers-data/turkey.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/6e1c8c4effd7723b6bc4182c38913af6296b4470/data/worldometers-data/israel.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/dff3a927a803d1b02087fd678370dd25cb352e77/data/worldometers-data/china.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/77c7baf46d64885cec26da73e4f0ced91a67e9ce/data/worldometers-data/finland.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/c0785e3b2cd4c9007e35adb215380a7213134910/data/worldometers-data/panama.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/adc639b6b7ecfd84236ed2c953c77caba817b157/data/worldometers-data/germany.csv"
+      },
+      {
+        "@id": "https://renkulab.io/blob/61f3d2b3907e022439348c9cd3826157a0a7ce8f/data/worldometers-data/austria.csv"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedGeneration": [
+      {
+        "@id": "https://renkulab.io/activities/98d22716-a0ba-47dd-b5a6-8ca0bd5071a9/generation/c4821b41-e4fe-45ba-9deb-da1b519fe288/e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5/data/worldometers-data"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "e2ee31f1ddb7d61e0fe53a7f541ad5d8134a81e5"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/blob/fc754aef88fa5d2abc616b7daaef8dd354727686/data/inference-data/details.json",
+    "@type": [
+      "http://purl.org/wf4ever/wfprov#Artifact",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "data/inference-data/details.json@UNCOMMITTED"
+      }
+    ],
+    "http://www.w3.org/ns/prov#atLocation": [
+      {
+        "@value": "data/inference-data/details.json"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#checksum": [
+      {
+        "@value": "fc754aef88fa5d2abc616b7daaef8dd354727686"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55",
+    "@type": [
+      "http://schema.org/Action",
+      "http://schema.org/CreativeWork",
+      "http://www.w3.org/ns/prov#Plan"
+    ],
+    "http://schema.org/keywords": [],
+    "http://schema.org/name": [
+      {
+        "@value": "python3-src_format_-0f38f"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#command": [
+      {
+        "@value": "python3"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasArguments": [
+      {
+        "@id": "https://renkulab.io/runs/2d93efbb-e469-46f3-ae44-86eb882f9e55/arguments/2"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasInputs": [
+      {
+        "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/inputs/1"
+      },
+      {
+        "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/inputs/4c5f41811c584371928756cc398c8efe"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasOutputs": [
+      {
+        "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/outputs/c045700f5515475eb8dc2a345596b837"
+      },
+      {
+        "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/outputs/0de29a3fe4464a449ca937e55e2de3a9"
+      },
+      {
+        "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/outputs/19ff6e2b75fe4736a6337ba68a24a094"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#successCodes": []
+  },
+  {
+    "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/inputs/1",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandInputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "src/format_data.py"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "input-1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Input Template \"src/format_data.py\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#position": [
+      {
+        "@value": 1
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/inputs/4c5f41811c584371928756cc398c8efe",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandInputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/worldometers-data"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "input-c955"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Input Template \"data/worldometers-data\""
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/outputs/0de29a3fe4464a449ca937e55e2de3a9",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandOutputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/model-data/overall_cases.csv"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "output-d4b5"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Output Template \"data/model-data/overall_cases.csv\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#createFolder": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/outputs/19ff6e2b75fe4736a6337ba68a24a094",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandOutputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/model-data/output_sequences.pkl"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "output-e2b6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Output Template \"data/model-data/output_sequences.pkl\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#createFolder": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/2d93efbb-e469-46f3-ae44-86eb882f9e55/outputs/c045700f5515475eb8dc2a345596b837",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandOutputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/model-data"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "output-d135"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Output Template \"data/model-data\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#createFolder": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a",
+    "@type": [
+      "http://schema.org/Action",
+      "http://schema.org/CreativeWork",
+      "http://www.w3.org/ns/prov#Plan"
+    ],
+    "http://schema.org/keywords": [],
+    "http://schema.org/name": [
+      {
+        "@value": "python3-src_infer.p-58f3e"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#command": [
+      {
+        "@value": "python3"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasArguments": [
+      {
+        "@id": "https://renkulab.io/runs/a49a29bf-fd2a-4dd1-b173-f56a5447220a/arguments/2"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasInputs": [
+      {
+        "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a/inputs/1"
+      },
+      {
+        "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a/inputs/403cc095acbb41cdaf2a68005939838c"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasOutputs": [
+      {
+        "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a/outputs/1e676b14d94145188f1e3639c2284812"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#successCodes": []
+  },
+  {
+    "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a/inputs/1",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandInputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "src/infer.py"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "input-1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Input Template \"src/infer.py\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#position": [
+      {
+        "@value": 1
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a/inputs/403cc095acbb41cdaf2a68005939838c",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandInputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/model-data"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "input-16a9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Input Template \"data/model-data\""
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/a49a29bf-fd2a-4dd1-b173-f56a5447220a/outputs/1e676b14d94145188f1e3639c2284812",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandOutputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/inference-data"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "output-4aea"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Output Template \"data/inference-data\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#createFolder": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518",
+    "@type": [
+      "http://schema.org/Action",
+      "http://schema.org/CreativeWork",
+      "http://www.w3.org/ns/prov#Plan"
+    ],
+    "http://schema.org/keywords": [],
+    "http://schema.org/name": [
+      {
+        "@value": "python3-src_downloa-8d435"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#command": [
+      {
+        "@value": "python3"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasArguments": [
+      {
+        "@id": "https://renkulab.io/runs/d2f2f7d9-395b-4c4f-922f-446450683518/arguments/2"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasInputs": [
+      {
+        "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518/inputs/1"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#hasOutputs": [
+      {
+        "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518/outputs/c276dbc65ca54872b49f76396475bcae"
+      },
+      {
+        "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518/outputs/a730d7ccb7ce403aa037ad32f3f7bd55"
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#successCodes": []
+  },
+  {
+    "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518/inputs/1",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandInputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "src/download_data.py"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "input-1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Input Template \"src/download_data.py\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#position": [
+      {
+        "@value": 1
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518/outputs/a730d7ccb7ce403aa037ad32f3f7bd55",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandOutputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/worldometers-data/italy.csv"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "output-f405"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Output Template \"data/worldometers-data/italy.csv\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#createFolder": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/plans/d2f2f7d9-395b-4c4f-922f-446450683518/outputs/c276dbc65ca54872b49f76396475bcae",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandOutputTemplate",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "data/worldometers-data"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "output-af73"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Output Template \"data/worldometers-data\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#createFolder": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/runs/2d93efbb-e469-46f3-ae44-86eb882f9e55/arguments/2",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandArgument",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "False"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "t-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Argument \"False\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#position": [
+      {
+        "@value": 2
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#prefix": [
+      {
+        "@value": "-t "
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#value": [
+      {
+        "@value": "False"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/runs/a49a29bf-fd2a-4dd1-b173-f56a5447220a/arguments/2",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandArgument",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "False"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "t-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Argument \"False\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#position": [
+      {
+        "@value": 2
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#prefix": [
+      {
+        "@value": "-t "
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#value": [
+      {
+        "@value": "False"
+      }
+    ]
+  },
+  {
+    "@id": "https://renkulab.io/runs/d2f2f7d9-395b-4c4f-922f-446450683518/arguments/2",
+    "@type": [
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandArgument",
+      "https://swissdatasciencecenter.github.io/renku-ontology#CommandParameter"
+    ],
+    "http://schema.org/defaultValue": [
+      {
+        "@value": "False"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "t-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Command Argument \"False\""
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#position": [
+      {
+        "@value": 2
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#prefix": [
+      {
+        "@value": "-t "
+      }
+    ],
+    "https://swissdatasciencecenter.github.io/renku-ontology#value": [
+      {
+        "@value": "False"
+      }
+    ]
+  },
+  {
+    "@id": "mailto:selim.amrari.pro@protonmail.ch",
+    "@type": [
+      "http://schema.org/Person",
+      "http://www.w3.org/ns/prov#Person"
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "selim.amrari.pro@protonmail.ch"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Selim Amrari"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Selim Amrari"
+      }
+    ]
+  }
+]
