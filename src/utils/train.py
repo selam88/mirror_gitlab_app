@@ -10,6 +10,7 @@ from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import TimeDistributed
 from sklearn.preprocessing import StandardScaler
 from .data import save_obj, load_obj
+import matplotlib.pyplot as plt
 
 
 def set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=200):
@@ -71,10 +72,10 @@ def scale_data(X_seq_, Y_seq_=None, scaler=None, target_id=1):
         Y_seq: (numpy array) scaled output sequences
         scaler: (sklearn.preprocessing.StandardScaler) StandardScaler instance
     """
+    X_seq = deepcopy(X_seq_)
     if isinstance(scaler, type(None)):
         scaler = StandardScaler()
         scaler.fit(X_seq[:,-1,:])
-    X_seq = deepcopy(X_seq_)
     for f in range(X_seq.shape[2]):
         X_seq[:,:,f] = (X_seq[:,:,f] - scaler.mean_[f]) / scaler.scale_[f]
     if not isinstance(Y_seq_, type(None)):
@@ -107,6 +108,29 @@ def unscale_data(scaler, X_seq_=None, Y_seq_=None, target_id=1):
         if isinstance(X_seq_, type(None)):
             return Y_seq
     return X_seq, Y_seq
+
+def record_benchmark_graph(folder="/work/test-first-project/data/models/"):
+    """
+    create and record a graph displaying training and validation loss
+    for all available model
+    args:
+        folder: (str) path of the folder containing models
+    returns:
+        none
+    """
+    bench_df = pd.DataFrame()
+    for model in os.listdir(folder):
+        if not os.path.isdir(os.path.join(folder, model)):
+            continue
+        if model.startswith(".") or model.startswith("discarded_"):
+            continue
+        current_df = pd.read_csv(os.path.join(folder, model, "score.csv"))
+        current_df.rename(columns={c:"{0:s}_{1:s}".format(model, c) for c in current_df.columns.values}, inplace=True)
+        bench_df = pd.concat([bench_df, current_df])
+    fig, ax = plt.subplots(figsize=(8,8))
+    bench_df.plot(ax=ax)
+    fig.savefig(os.path.join(folder, "benchmark.png"), dpi=200, bbox_inches="tight")
+    return
     
 class scaled_model:
     """

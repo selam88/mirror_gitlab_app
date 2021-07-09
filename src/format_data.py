@@ -63,8 +63,13 @@ def main(csv_folder,
             assert v.shape[0]==input_seq.shape[0] 
     output_seq = output_seq[:,:, np.newaxis]
             
-    # record sequences
+    # record sequences and sequence details
     model_data_folder = "/work/test-first-project/data/model-data/"
+    records = ["input_variables", "output_variable", "in_timesteps","out_timesteps", "resampling_rule",
+              "downloading_date", "formated_countries"]
+    records_values = [[input_variables], [output_variable], [in_timesteps], [out_timesteps], [resampling_rule],
+                      d_u.reads_details(csv_folder)["processing_date"], [c for c in np.unique(country_array)]]
+    d_u.records_details(model_data_folder, {k:v for k,v in zip(records, records_values)})
     d_u.save_obj(input_seq, os.path.join(model_data_folder, "input_sequences.pkl"))
     d_u.save_obj(output_seq, os.path.join(model_data_folder, "output_sequences.pkl"))
     d_u.save_obj(last_in_dates, os.path.join(model_data_folder, "last_in_dates.pkl"))
@@ -95,7 +100,7 @@ if __name__ == "__main__":
     parser.add_argument('--in_timesteps', 
                         help='Number of input timestep', 
                         type=int, 
-                        default=20)
+                        default=40)
     parser.add_argument('--out_timesteps', 
                         help='Number of output timestep', 
                         type=int, 

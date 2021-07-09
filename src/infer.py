@@ -1,7 +1,7 @@
 import os, argparse, subprocess
 import pandas as pd
 import numpy as np
-from utils.data import load_training_data, save_obj
+from utils.data import load_training_data, save_obj, reads_details, records_details
 from utils import train as t_u
 
 def main(model_name, models_folder, inference_folder, add_dataset=True):
@@ -19,12 +19,16 @@ def main(model_name, models_folder, inference_folder, add_dataset=True):
     input_seq, output_seq, last_in_dates, country_array = load_training_data()
     predictions = model.predict(input_seq)
 
-    # record sequences
+    # record sequences and details
     var_list = [predictions, last_in_dates, country_array]
     name_list = ["predictions.pkl", "last_in_dates", "country.pkl"]
     for var, var_name in zip(var_list, name_list):
         save_obj(var, os.path.join(inference_folder, var_name))
-            
+    details_dic = reads_details(model_folder)
+    del details_dic["processing_date"]
+    details_dic["model"] = model_name
+    records_details(inference_folder, details_dic)
+    
     # track dataset records
     if add_dataset:
         files = [os.path.join(inference_folder, f) for f in os.listdir(inference_folder)]
