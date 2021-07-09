@@ -109,6 +109,10 @@ if __name__ == "__main__":
                         help='Rule to apply resampling ("None"(default), "W", "M", "W-Mon"...)', 
                         type=str, 
                         default="None")
+    parser.add_argument('-t', '--track_data_change', 
+                        help='if True, add and push dataset change (default True)', 
+                        type=lambda x: (str(x).lower() == 'true'), 
+                        default=True)
 
     args = parser.parse_args()
     csv_folder = args.csv_folder
@@ -117,5 +121,8 @@ if __name__ == "__main__":
     in_timesteps = args.in_timesteps
     out_timesteps = args.out_timesteps
     resampling_rule = None if args.resampling_rule=="None" else args.resampling_rule
-    main(csv_folder, input_variables, output_variable, in_timesteps, out_timesteps, resampling_rule)
+    track_data_change = args.track_data_change
+    main(csv_folder, input_variables, output_variable,
+         in_timesteps, out_timesteps, resampling_rule,
+         add_dataset=track_data_change)
    

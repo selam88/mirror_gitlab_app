@@ -33,6 +33,10 @@ if __name__ == "__main__":
                         help='folder to record the csv in', 
                         type=str, 
                         default="/work/test-first-project/data/worldometers-data/")
+    parser.add_argument('-t', '--track_data_change', 
+                        help='if True, add and push dataset change (default True)', 
+                        type=lambda x: (str(x).lower() == 'true'), 
+                        default=True)
 
     args = parser.parse_args()
-    main(folder_name=args.folder)
+    main(folder_name=args.folder, add_dataset=args.track_data_change)

@@ -51,10 +51,15 @@ if __name__ == "__main__":
                         help='folder to solve inference data in', 
                         type=str, 
                         default="/work/test-first-project/data/inference-data/")
+    parser.add_argument('-t', '--track_data_change', 
+                        help='if True, add and push dataset change (default True)', 
+                        type=lambda x: (str(x).lower() == 'true'), 
+                        default=True)
 
     args = parser.parse_args()
     model_name = args.model_name
     models_folder = args.models_folder
     inference_folder = args.inference_folder
-    main(model_name, models_folder, inference_folder)
+    track_data_change = args.track_data_change
+    main(model_name, models_folder, inference_folder, add_dataset=track_data_change)
    

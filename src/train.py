@@ -39,7 +39,6 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
     
     # update benchmark
     t_u.record_benchmark_graph()
-    
     # track dataset records
     if add_dataset:
         cmd = "renku dataset add --overwrite models {0:s}".format(model_path)
@@ -61,6 +60,10 @@ if __name__ == "__main__":
                         help='number of units in the lstm layer composing the model', 
                         type=int, 
                         default=50)
+    parser.add_argument('-t', '--track_data_change', 
+                        help='if True, add and push dataset change (default True)', 
+                        type=lambda x: (str(x).lower() == 'true'), 
+                        default=True)
 
     args = parser.parse_args()
-    main(model_name=args.model_name, n_epochs=args.epochs, n_units=args.n_units)
+    main(model_name=args.model_name, n_epochs=args.epochs, n_units=args.n_units, add_dataset=args.track_data_change)
