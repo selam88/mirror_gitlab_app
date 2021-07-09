@@ -1,15 +1,15 @@
-- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F6d1e0fea-cf8e-4ccd-9e8a-f0fab36cc243
+- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F79a7c3bb-68f3-4667-8df2-b1c8614183a9
   '@type':
   - http://schema.org/URL
   http://schema.org/url:
-  - '@id': https://renkulab.io/datasets/6d1e0fea-cf8e-4ccd-9e8a-f0fab36cc243
+  - '@id': https://renkulab.io/datasets/79a7c3bb-68f3-4667-8df2-b1c8614183a9
 - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/australia.csv
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.363938+00:00'
+  - '@value': '2021-07-09T09:27:01.616952+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -30,7 +30,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.336024+00:00'
+  - '@value': '2021-07-09T09:27:01.585303+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -51,7 +51,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.305424+00:00'
+  - '@value': '2021-07-09T09:27:01.551143+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -72,7 +72,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.315839+00:00'
+  - '@value': '2021-07-09T09:27:01.561308+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -93,7 +93,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.404753+00:00'
+  - '@value': '2021-07-09T09:27:01.661133+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -114,7 +114,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.353845+00:00'
+  - '@value': '2021-07-09T09:27:01.606837+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -135,7 +135,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.383575+00:00'
+  - '@value': '2021-07-09T09:27:01.639126+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -156,7 +156,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.264155+00:00'
+  - '@value': '2021-07-09T09:27:01.510561+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -177,7 +177,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.274703+00:00'
+  - '@value': '2021-07-09T09:27:01.522016+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -198,7 +198,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.394676+00:00'
+  - '@value': '2021-07-09T09:27:01.650947+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -219,7 +219,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.295469+00:00'
+  - '@value': '2021-07-09T09:27:01.541597+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -240,7 +240,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.325910+00:00'
+  - '@value': '2021-07-09T09:27:01.573271+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -261,7 +261,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.251927+00:00'
+  - '@value': '2021-07-09T09:27:01.498802+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -282,7 +282,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.372166+00:00'
+  - '@value': '2021-07-09T09:27:01.628627+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -303,7 +303,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.345083+00:00'
+  - '@value': '2021-07-09T09:27:01.596774+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -324,7 +324,7 @@
   - http://schema.org/DigitalDocument
   - http://www.w3.org/ns/prov#Entity
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:13:56.284817+00:00'
+  - '@value': '2021-07-09T09:27:01.532447+00:00'
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/name:
@@ -360,7 +360,7 @@
   - '@value': false
   https://swissdatasciencecenter.github.io/renku-ontology#source:
   - '@value': data/worldometers-data/details.json
-- '@id': https://renkulab.io/datasets/79a7c3bb-68f3-4667-8df2-b1c8614183a9
+- '@id': https://renkulab.io/datasets/ec8fc0db-635b-4f17-a00b-8434c9a418d9
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
   - http://schema.org/Dataset
@@ -370,8 +370,9 @@
   http://schema.org/creator:
   - '@id': mailto:selim.amrari.pro@protonmail.ch
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T09:16:16.966977+00:00'
+  - '@value': '2021-07-09T09:27:01.664077+00:00'
   http://schema.org/hasPart:
+  - '@id': https://renkulab.io/blob/cf42c95d218d2b8ac8406b173ae6575f5fe64639/data/worldometers-data/details.json
   - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/italy.csv
   - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/france.csv
   - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/germany.csv
@@ -388,9 +389,8 @@
   - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/finland.csv
   - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/iceland.csv
   - '@id': https://renkulab.io/blob/c69130e203676fdf0b83eabaf0dc6e74d8fe21cb/data/worldometers-data/china.csv
-  - '@id': https://renkulab.io/blob/cf42c95d218d2b8ac8406b173ae6575f5fe64639/data/worldometers-data/details.json
   http://schema.org/identifier:
-  - '@value': 79a7c3bb-68f3-4667-8df2-b1c8614183a9
+  - '@value': ec8fc0db-635b-4f17-a00b-8434c9a418d9
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/keywords: []
@@ -398,13 +398,13 @@
   - '@value': covid data from worldometers.info/
   http://schema.org/subjectOf: []
   http://schema.org/url:
-  - '@value': https://renkulab.io/datasets/79a7c3bb-68f3-4667-8df2-b1c8614183a9
+  - '@value': https://renkulab.io/datasets/ec8fc0db-635b-4f17-a00b-8434c9a418d9
   http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': 79a7c3bb-68f3-4667-8df2-b1c8614183a9
+  - '@value': ec8fc0db-635b-4f17-a00b-8434c9a418d9
   http://www.w3.org/ns/prov#atLocation:
   - '@value': .renku/datasets/78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
   http://www.w3.org/ns/prov#wasDerivedFrom:
-  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F6d1e0fea-cf8e-4ccd-9e8a-f0fab36cc243
+  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F79a7c3bb-68f3-4667-8df2-b1c8614183a9
 - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   '@type':
   - http://schema.org/Project
