@@ -4,6 +4,7 @@ data/inference-data:
 data/model-data:
   ee7a8610602320cf0ae5270b141571b3c9921c86:
   - .renku/workflow/35dc7e2326c64093ad1f5e004b807c0f_python3.yaml
+  - .renku/workflow/a20b8cbcb6364f319d10488fbc17dac9_python3.yaml
 data/worldometers-data:
   0bb9791a89fae9f61eeda970b915430779c12c24:
   - .renku/workflow/445860fe20e54b61abad3f0ebfea1886_rerun.yaml
