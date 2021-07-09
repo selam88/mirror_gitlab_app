@@ -7,7 +7,7 @@ import altair as alt
 from copy import deepcopy
 
 
-def get_first_chart(main_vis_df, country, cutoff):
+def get_first_chart(main_vis_df, country, cutoff, date_timest):
     """
     Create overall country predictions/situation graph
     args:
@@ -18,6 +18,7 @@ def get_first_chart(main_vis_df, country, cutoff):
         country: (str) Name of the country to display
         cutoo: (pandas Dataframe) Dataframe with cutoff value defining 
                 the monthly selected interval
+        date_timestamp: (pandas Timestamp) Timestamp date of the predictions
     return:
         altair.chart
     """
@@ -99,6 +100,7 @@ def get_third_chart(multi_seg_df, date_timest):
     args:
         multi_seg_df: (pandas DataFrame) Dataframe of value to display 
                        with "Date", "Daily new cases" and "Category" attributes
+        date_timestamp: (pandas Timestamp) Timestamp date of the predictions
     return:
         altair.chart
     """
