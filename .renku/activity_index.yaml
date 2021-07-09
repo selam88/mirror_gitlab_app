@@ -1,3 +1,12 @@
+data/model-data:
+  1256534e1bb192f1abd0c1053e8b8f17afd6d77f:
+  - .renku/workflow/efc79d8265f143ebb9fe54cc03df4b22_python3.yaml
+data/model-data/output_sequences.pkl:
+  1256534e1bb192f1abd0c1053e8b8f17afd6d77f:
+  - .renku/workflow/efc79d8265f143ebb9fe54cc03df4b22_python3.yaml
+data/model-data/overall_cases.csv:
+  1256534e1bb192f1abd0c1053e8b8f17afd6d77f:
+  - .renku/workflow/efc79d8265f143ebb9fe54cc03df4b22_python3.yaml
 data/worldometers-data:
   247cda649a99a3e9b24c5c6b1323f20903f74e25:
   - .renku/workflow/08305ef9033d473f8b40f51282d636a3_python3.yaml
