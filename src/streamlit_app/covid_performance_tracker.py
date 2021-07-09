@@ -31,6 +31,7 @@ with header:
     Welcome to the Covid-19 New cases Predictions tracker. This web application displays the daily number of new Covid-19 cases reported in the selected country as well as the prediction interval, since the beginning of the pandemic. This application also allows to display any predictions related to the selected date and the corresponding monthly average errors for each predicted timesteps.
 
     **Note:** If your browser display the dark theme by default, you can change it with to top right icon `>` Settings.
+    
     **Note:** If you don't see the "User Selection" sidebar, please press the `>` icon on the top left side of your screen.
     
     """)
