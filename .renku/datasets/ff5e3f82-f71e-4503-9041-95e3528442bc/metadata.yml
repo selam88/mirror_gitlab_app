@@ -1,29 +1,8 @@
-- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F3ad91bf0-809b-4834-b8be-e2d2f4388df5
+- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2Feb277515-208d-4158-a99d-1e94d132101f
   '@type':
   - http://schema.org/URL
   http://schema.org/url:
-  - '@id': https://renkulab.io/datasets/3ad91bf0-809b-4834-b8be-e2d2f4388df5
-- '@id': https://renkulab.io/blob/03dd1934096d2f2f268df785111a88010c7f8a72/data/models/model_test/model/saved_model.pb
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-07-05T16:00:37.278046+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': saved_model.pb
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/models/model_test/model/saved_model.pb
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/models/model_test/model/saved_model.pb@03dd1934096d2f2f268df785111a88010c7f8a72
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/models/model_test/model/saved_model.pb
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/models/model_test/model/saved_model.pb
+  - '@id': https://renkulab.io/datasets/eb277515-208d-4158-a99d-1e94d132101f
 - '@id': https://renkulab.io/blob/03dd1934096d2f2f268df785111a88010c7f8a72/data/models/model_test/score.csv
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
@@ -318,7 +297,7 @@
   - '@value': false
   https://swissdatasciencecenter.github.io/renku-ontology#source:
   - '@value': data/models/model_3/score.csv
-- '@id': https://renkulab.io/datasets/eb277515-208d-4158-a99d-1e94d132101f
+- '@id': https://renkulab.io/datasets/a435d9f7-56d0-41e1-8fab-5f6467ac7c31
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
   - http://schema.org/Dataset
@@ -328,10 +307,9 @@
   http://schema.org/creator:
   - '@id': mailto:selim.amrari.pro@protonmail.ch
   http://schema.org/dateCreated:
-  - '@value': '2021-07-09T10:48:15.947662+00:00'
+  - '@value': '2021-07-09T10:48:39.149841+00:00'
   http://schema.org/hasPart:
   - '@id': https://renkulab.io/blob/03dd1934096d2f2f268df785111a88010c7f8a72/data/models/model_test/score.csv
-  - '@id': https://renkulab.io/blob/03dd1934096d2f2f268df785111a88010c7f8a72/data/models/model_test/model/saved_model.pb
   - '@id': https://renkulab.io/blob/394965b2de96e6f920c0d156eea685920cc0c16b/data/models/models_2/model/variables/variables.data-00000-of-00001
   - '@id': https://renkulab.io/blob/394965b2de96e6f920c0d156eea685920cc0c16b/data/models/models_2/model/variables/variables.index
   - '@id': https://renkulab.io/blob/394965b2de96e6f920c0d156eea685920cc0c16b/data/models/models_2/model/keras_metadata.pb
@@ -346,7 +324,7 @@
   - '@id': https://renkulab.io/blob/5b3ff3f3987185db04c0cdbd118f4a6403da349c/data/models/model_3/scaler.pkl
   - '@id': https://renkulab.io/blob/7cf526be8fa73e0fcffa81a98de8626674ed784a/data/models/model_3/score.csv
   http://schema.org/identifier:
-  - '@value': eb277515-208d-4158-a99d-1e94d132101f
+  - '@value': a435d9f7-56d0-41e1-8fab-5f6467ac7c31
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/keywords: []
@@ -354,13 +332,13 @@
   - '@value': models
   http://schema.org/subjectOf: []
   http://schema.org/url:
-  - '@value': https://renkulab.io/datasets/eb277515-208d-4158-a99d-1e94d132101f
+  - '@value': https://renkulab.io/datasets/a435d9f7-56d0-41e1-8fab-5f6467ac7c31
   http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': eb277515-208d-4158-a99d-1e94d132101f
+  - '@value': a435d9f7-56d0-41e1-8fab-5f6467ac7c31
   http://www.w3.org/ns/prov#atLocation:
   - '@value': .renku/datasets/ff5e3f82-f71e-4503-9041-95e3528442bc
   http://www.w3.org/ns/prov#wasDerivedFrom:
-  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F3ad91bf0-809b-4834-b8be-e2d2f4388df5
+  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2Feb277515-208d-4158-a99d-1e94d132101f
 - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   '@type':
   - http://schema.org/Project
