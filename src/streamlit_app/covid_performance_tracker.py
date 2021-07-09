@@ -111,7 +111,7 @@ with output_graphs:
     multi_seg_df.rename(columns=renaming, inplace=True)
     noisy_seg_df.rename(columns=renaming, inplace=True)
     third_chart, forth_chart = get_third_chart(multi_seg_df, date_timest), get_third_chart(noisy_seg_df, date_timest)
-    third_chart | forth_chart
+    (third_chart | forth_chart).properties(title="Predicted sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m")))
     st.markdown("""
     **Note:** You can change the amount of noise added to the input sequence, using the "User Selection" sidebar.
     """)

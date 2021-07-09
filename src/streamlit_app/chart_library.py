@@ -109,8 +109,8 @@ def get_third_chart(multi_seg_df, date_timest):
         y='Daily new cases',
         color='Category',
         strokeDash='Category',
-    ).properties(title="Predicted sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
     ).interactive()
     vertical_line = alt.Chart(pd.DataFrame(data={"vert_line":[date_timest]})).mark_rule(strokeDash=[5,5]).encode(
     x='vert_line', color=alt.ColorValue('#4c78a8'), size=alt.value(1.5))
-    return third_chart + vertical_line
+    return (third_chart + vertical_line).properties(title="Predicted sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
+    )
