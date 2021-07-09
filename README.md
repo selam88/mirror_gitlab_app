@@ -23,7 +23,6 @@ The implementation of the project relys on 4 scripts which allow
 to aumatize specific parts of the project. This 4 application
 script, located in src/ are:
  
- Markup :
 	* download_data.py: download and store all available data from [Wordlometers](https://www.worldometers.info/coronavirus/)
 
 	* format_data.py: preprocess downloaded COVID data into trainable multivariates sequences
