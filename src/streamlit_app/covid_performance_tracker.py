@@ -1,6 +1,4 @@
 import os, sys
-sys.path.append("../")
-sys.path.append("../../")
 sys.path.append("/app/mirror_gitlab_app/")
 sys.path.append("/app/mirror_gitlab_app/src")
 from utils.data import load_prediction_data, load_training_data
@@ -32,7 +30,7 @@ with header:
     
     Welcome to the Covid-19 New cases Predictions tracker. This web application displays the daily number of new Covid-19 cases reported in the selected country as well as the prediction interval, since the beginning of the pandemic. This application also allows to display any predictions related to the selected date and the corresponding monthly average errors for each predicted timesteps.
 
-    **Note:** If your browser display the dark theme by default, you can change it with to top right icon.
+    **Note:** If your browser display the dark theme by default, you can change it with to top right icon `>` Settings.
     **Note:** If you don't see the "User Selection" sidebar, please press the `>` icon on the top left side of your screen.
     
     """)
@@ -121,7 +119,7 @@ with author_credits:
     st.markdown("""
     **Thank you for using my application!**
     
-    This dashboard has been devlopped thanks to the following [Covid-19-County-Tracker app](https://github.com/cerratom/Covid-19-County-Tracker) used as template. Feel free to have a look on the original [dashboard app](https://share.streamlit.io/cerratom/covid-19-county-tracker/county.py)
+    This dashboard has been developed thanks to the following [Covid-19-County-Tracker app](https://github.com/cerratom/Covid-19-County-Tracker) used as template. Feel free to have a look on the original [dashboard app](https://share.streamlit.io/cerratom/covid-19-county-tracker/county.py)
     
     The dataset used to feed this application is provided by [Wordlometers](https://www.worldometers.info/coronavirus/) and ingested thanks to the [covid-daily python API](https://pypi.org/project/covid-daily/).
 
