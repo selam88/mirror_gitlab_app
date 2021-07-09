@@ -1,9 +1,8 @@
-import os
+import os, json, pickle, covid_daily
 import pandas as pd
 import numpy as np
-import covid_daily
 from covid_daily.constants import AVAILABLE_CHARTS 
-import pickle
+from datetime import date
 
 
 def records_country(country_name, data_folder):
@@ -104,3 +103,36 @@ def load_prediction_data(model_folder="/work/test-first-project/data/model-data/
     country_array = load_obj(os.path.join(inference_folder, "country.pkl"))
     overall_df = pd.read_csv(os.path.join(model_folder, "overall_cases.csv"), index_col="Date", parse_dates=True)
     return predictions, last_in_dates, country_array, overall_df
+
+def records_details(location_path, details_dic, append_current_date=True):
+    """
+    Records a json file reporting details of the saved data
+    args:
+        location_path: (str) path of the json to record
+        details_dic: (dic) dictionnary of the details to record
+        append_current_date: (bool) if True, add currend date as processing date
+    return: 
+        None
+    """
+    if not location_path.endswith(".json"):
+        location_path = os.path.join(location_path, "details.json")
+    if append_current_date:
+        details_dic["processing_date"] = [date.today().strftime("%Y-%m-%d")]
+    with open(location_path, 'w') as output:
+        json.dump(details_dic, output, indent=4)
+    return
+
+def reads_details(location_path):
+    """
+    Read a json file reporting details of the saved data
+    args:
+        location_path: (str) path of the json to parse
+    return: 
+        details_dic: (dic) dictionnary of the details to record
+    """
+    if not location_path.endswith(".json"):
+        location_path = os.path.join(location_path, "details.json")
+    with open(location_path, 'r') as output:
+        details_dic = json.load(output)
+    return details_dic
+    
