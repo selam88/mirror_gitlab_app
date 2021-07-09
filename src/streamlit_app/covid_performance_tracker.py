@@ -32,6 +32,7 @@ with header:
     
     Welcome to the Covid-19 New cases Predictions tracker. This web application displays the daily number of new Covid-19 cases reported in the selected country as well as the prediction interval, since the beginning of the pandemic. This application also allows to display any predictions related to the selected date and the corresponding monthly average errors for each predicted timesteps.
 
+    **Note:** If your browser display the dark theme by default, you can change it with to top right icon
     **Note:** If you don't see the "User Selection" sidebar, please press the `>` icon on the top left side of your screen.
     
     """)
@@ -48,14 +49,14 @@ displayed_country_list = [c.title() for c in country_list]
 with user_input:
     st.sidebar.header('User Selection') 
     # Country widget
-    country_ = st.sidebar.selectbox('Select Your Country:',displayed_country_list) 
+    country_ = st.sidebar.selectbox('Select Your Country:',displayed_country_list, index=4) 
     country = country_.lower()
     # Date widget
     #date = st.sidebar.date_input("Select the date you want to check", min_value=predictions_df.index[0], max_value=predictions_df.index[-1])
     date = st.sidebar.slider("Select the date you want to check", 
                              min_value=predictions_df.index[0].to_pydatetime(), 
                              max_value=predictions_df.index[-1].to_pydatetime(), 
-                             value=predictions_df.index[0].to_pydatetime(), 
+                             value=pd.to_datetime("2020-09-07").to_pydatetime(), 
                              step=timedelta(days=1))
     noise = st.sidebar.slider("Select the amount of noise you want to add to the input sequence (in %)", 
                              min_value=0, 
