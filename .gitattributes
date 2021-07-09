@@ -26,3 +26,4 @@ data/models/discarded_model_test/model/saved_model.pb filter=lfs diff=lfs merge=
 data/models/discarded_model_test/model/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
 data/worldometers-data/** filter=lfs diff=lfs merge=lfs -text
 data/model-data/** filter=lfs diff=lfs merge=lfs -text
+data/inference-data/** filter=lfs diff=lfs merge=lfs -text
