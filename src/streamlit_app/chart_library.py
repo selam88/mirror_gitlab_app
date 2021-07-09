@@ -105,9 +105,9 @@ def get_third_chart(multi_seg_df, date_timest, noisy=False):
         altair.chart
     """
     if noisy:
-        title_="Predicted noisy sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
+        title_="Predicted noisy sequence from {0:s}".format(date_timest.strftime("%Y-%m-%m"))
     else:
-        title_="Predicted sequence from the {0:s}".format(date_timest.strftime("%Y-%m-%m"))
+        title_="Predicted sequence from {0:s}".format(date_timest.strftime("%Y-%m-%m"))
     third_chart = alt.Chart(multi_seg_df).mark_line().encode(
         x='Date',
         y='Daily new cases',
