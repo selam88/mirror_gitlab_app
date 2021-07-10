@@ -1,6 +1,6 @@
 import os, sys
-sys.path.append("/app/mirror_gitlab_app/")
-sys.path.append("/app/mirror_gitlab_app/src")
+sys.path.append("../../")
+sys.path.append("../")
 from utils.data import load_prediction_data, load_training_data
 import pandas as pd
 import numpy as np
@@ -18,9 +18,9 @@ user_input = st.beta_container()
 output_graphs = st.beta_container()
 author_credits = st.beta_container()
 # Hard-coded path, specific to streamlit app sharing
-model_folder = "/app/mirror_gitlab_app/data/models/models_2/"
-training_folder = "/app/mirror_gitlab_app/data/model-data/"
-inference_folder = "/app/mirror_gitlab_app/data/inference-data/"
+model_folder = "../../data/models/models_2/"
+training_folder = "../../data/model-data/"
+inference_folder = "../../data/inference-data/"
 # Load model 
 model = scaled_model(model_folder)
 
