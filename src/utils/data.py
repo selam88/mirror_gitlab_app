@@ -65,7 +65,7 @@ def load_obj(name):
     '''
     load object
     '''
-    name = name if not name.endswith(".pkl") else name
+    name = name+".pkl" if not name.endswith(".pkl") else name
     with open(name, 'rb') as f:
         return pickle.load(f)
     

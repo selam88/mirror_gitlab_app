@@ -5,7 +5,7 @@ variables:
 
 stages:
   - build
-  - syntax_check
+  - tests
         
 image_build:
   stage: build
@@ -16,3 +16,20 @@ image_build:
     CI_COMMIT_SHA_7=$(echo $CI_COMMIT_SHA | cut -c1-7)
     docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+
+syntax_check:
+  stage: tests
+  image: python:3.8
+  before_script:
+    - pip install flake8
+  script:
+    - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    
+pytests:
+  stage: tests
+  image: python:3.8
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - pytest tests
