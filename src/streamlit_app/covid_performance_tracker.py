@@ -1,6 +1,6 @@
 import os, sys
 sys.path.append("../../")
-sys.path.append("../")
+sys.path.append("/app/mirror_gitlab_app/")
 from src.utils.data import load_prediction_data, load_training_data
 import pandas as pd
 import numpy as np
