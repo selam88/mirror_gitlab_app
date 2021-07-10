@@ -84,7 +84,8 @@ def get_second_chart(monthly_error_df, date_timestamp):
             ),
         )
     ).properties(title="Distributions of prediction error per timestep in {0:s} {1:d}".format(date_timestamp.month_name(), date_timestamp.year),
-        width=35
+     width=35,
+     background='white'
     ).configure_title(
     anchor='middle'
     ).configure_facet(
