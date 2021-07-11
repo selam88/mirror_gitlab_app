@@ -6,6 +6,7 @@ variables:
 stages:
   - build
   - tests
+  - Data_ingestion
         
 image_build:
   stage: build
@@ -34,14 +35,13 @@ pytests:
   script:
     - pytest tests
 
-Data_ingestion:
+Data_update:
+  stage: Data_ingestion
   image: python:3.8
-  only:
-    - schedules
-  before_script:
-    - pip install -r requirements.txt
   rules:
     - if: $CI_PIPELINE_REF = "Data_ingestion"
+  before_script:
+    - pip install -r requirements.txt
   script:
     - echo "$CI_PIPELINE_REF"
 
