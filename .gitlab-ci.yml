@@ -33,3 +33,15 @@ pytests:
     - pip install -r requirements.txt
   script:
     - pytest tests
+
+Data_ingestion:
+  image: python:3.8
+  only:
+    - schedules
+  before_script:
+    - pip install -r requirements.txt
+  rules:
+    - if: $CI_PIPELINE_REF = "Data_ingestion"
+  script:
+    - echo "$CI_PIPELINE_REF"
+
