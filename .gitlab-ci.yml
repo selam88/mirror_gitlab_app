@@ -39,7 +39,7 @@ Data_update:
   stage: Data_ingestion
   image: python:3.8
   rules:
-    - if: $CI_PIPELINE_REF = "Data_ingestion"
+    - if: $CI_PIPELINE_REF == "Data_ingestion"
   before_script:
     - pip install -r requirements.txt
   script:
