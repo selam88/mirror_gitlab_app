@@ -39,6 +39,8 @@ Data_update:
   stage: Data_ingestion
   image: 
     name: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
   rules:
     - if: $CI_PIPELINE_REF == "Data_ingestion"
   script:
