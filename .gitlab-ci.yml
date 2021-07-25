@@ -3,6 +3,22 @@ variables:
   GIT_SSL_NO_VERIFY: "true"
   GIT_LFS_SKIP_SMUDGE: 1
 
+.git-setup: &git_setup
+  - apt-get update -y
+  - apt-get install openssh-client -y
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$GIT_SSH_PRIV_KEY")
+  - git config --global user.email "s.amrari.ci_runner@pm.me"
+  - git config --global user.name "Mr. Robot"
+  - mkdir -p /root/.ssh
+  - ssh-keyscan -H renkulab.io >> gitlab-known-hosts
+  - cat gitlab-known-hosts >> /root/.ssh/known_hosts
+  - mkdir /work
+  - cd /work
+  - git clone git@renkulab.io:selim.amrari.pro/test-first-project.git
+  - cd test-first-project
+  - git lfs install --local
+
 stages:
   - build
   - tests
@@ -41,8 +57,12 @@ Data_update:
     name: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
+    - *git_setup
   rules:
     - if: $CI_PIPELINE_REF == "Data_ingestion"
   script:
-    - echo "$CI_PIPELINE_REF"
+    - git checkout $CI_COMMIT_BRANCH 
+    - chmod +x src/bash_sc/update_data.sh
+    - src/bash_sc/update_data.sh
+    - git push origin $CI_COMMIT_BRANCH 
 
