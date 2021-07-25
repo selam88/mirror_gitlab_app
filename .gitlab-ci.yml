@@ -33,6 +33,8 @@ image_build:
     CI_COMMIT_SHA_7=$(echo $CI_COMMIT_SHA | cut -c1-7)
     docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+    echo "$CI_REGISTRY_IMAGE"
+    echo "$CI_COMMIT_SHA_7"
 
 syntax_check:
   stage: tests
