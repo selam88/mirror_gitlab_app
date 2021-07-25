@@ -33,9 +33,19 @@ image_build:
     CI_COMMIT_SHA_7=$(echo $CI_COMMIT_SHA | cut -c1-7)
     docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
-    echo "$CI_REGISTRY_IMAGE"
-    echo "$CI_COMMIT_SHA_7"
-    echo "$CI_JOB_TOKEN"
+
+update-build:
+  stage: build
+  image: docker:stable
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
+  rules:
+    - if: $CI_PIPELINE_REF == "Data_ingestion"
+  script: |
+    docker build --build-arg BUILDKIT_INLINE_CACHE=1 \
+      --tag $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update \
+      --cache-from $CI_REGISTRY_IMAGE .
+    docker push $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
 
 syntax_check:
   stage: tests
@@ -58,7 +68,7 @@ pytests:
 Data_update:
   stage: Data_ingestion
   image: 
-    name: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+    name: $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
     - *git_setup
