@@ -35,6 +35,7 @@ image_build:
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
     echo "$CI_REGISTRY_IMAGE"
     echo "$CI_COMMIT_SHA_7"
+    echo "$CI_JOB_TOKEN"
 
 syntax_check:
   stage: tests
@@ -56,7 +57,7 @@ pytests:
 Data_update:
   stage: Data_ingestion
   image: 
-    name: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+    name: $CI_REGISTRY_IMAGE:$(echo $CI_COMMIT_SHA | cut -c1-7)
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
     - *git_setup
