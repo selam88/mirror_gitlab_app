@@ -56,7 +56,6 @@ syntax_check:
   script:
     - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
     - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - echo "$CI_COMMIT_SHA_7"
     
 pytests:
   stage: tests
@@ -70,7 +69,7 @@ Data_update:
   stage: Data_ingestion
   image: 
     name: $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
-    entrypoint: ["/bin/bash"]
+    entrypoint: ["/bin/bash", "-c"]
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
     - *git_setup
