@@ -69,6 +69,7 @@ Data_update:
   stage: Data_ingestion
   image: 
     name: $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
+    entrypoint: ["/bin/bash"]
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
     - *git_setup
