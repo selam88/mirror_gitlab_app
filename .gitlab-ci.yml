@@ -4,6 +4,7 @@ variables:
   GIT_LFS_SKIP_SMUDGE: 1
 
 .git-setup: &git_setup
+  - echo "start data setup"
   - apt-get update -y
   - apt-get install openssh-client -y
   - eval $(ssh-agent -s)
@@ -69,13 +70,14 @@ Data_update:
   stage: Data_ingestion
   image: 
     name: $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
-    entrypoint: ["/bin/bash"]
+    entrypoint: "/bin/bash"
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
     - *git_setup
   rules:
     - if: $CI_PIPELINE_REF == "Data_ingestion"
   script:
+    - echo "start data_update"
     - git checkout $CI_COMMIT_BRANCH 
     - chmod +x src/bash_sc/update_data.sh
     - src/bash_sc/update_data.sh
