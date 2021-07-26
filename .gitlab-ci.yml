@@ -43,6 +43,7 @@ update-build:
   rules:
     - if: $CI_PIPELINE_REF == "Data_ingestion"
   script: |
+    echo 'ENTRYPOINT /bin/bash' >> Dockerfile
     docker build --build-arg BUILDKIT_INLINE_CACHE=1 \
       --tag $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update \
       --cache-from $CI_REGISTRY_IMAGE .
@@ -69,7 +70,6 @@ Data_update:
   stage: Data_ingestion
   image: 
     name: $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
-    entrypoint: ["bash", "-c"]
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
     - *git_setup
