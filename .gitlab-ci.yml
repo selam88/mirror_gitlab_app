@@ -8,9 +8,6 @@ variables:
   - apt-get update -y
   - apt-get install openssh-client -y
   - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | tr -d ' ' | base64 -d
-  - echo "$SSH_PRIVATE_KEY" | base64 -d
-  - echo "$SSH_PRIVATE_KEY"
   - ssh-add <(echo "$SSH_PRIVATE_KEY" | tr -d ' ' | base64 -d)
   - git config --global user.email "s.amrari.ci_runner@pm.me"
   - git config --global user.name "Mr. Robot"
@@ -78,9 +75,9 @@ Data_update:
   rules:
     - if: $CI_PIPELINE_REF == "Data_ingestion"
   script:
-    - echo "start data_update"
     - git checkout $CI_COMMIT_BRANCH 
     - chmod +x src/bash_sc/update_data.sh
+    - echo ls /work/test-first-project/data/models/models_2/model/
     - src/bash_sc/update_data.sh
     - git push origin $CI_COMMIT_BRANCH 
 
