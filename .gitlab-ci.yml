@@ -77,7 +77,7 @@ Data_update:
   script:
     - git checkout $CI_COMMIT_BRANCH 
     - chmod +x src/bash_sc/update_data.sh
-    - echo ls /work/test-first-project/data/models/models_2/model/
+    - ls /work/test-first-project/data/models/models_2/model/
     - src/bash_sc/update_data.sh
     - git push origin $CI_COMMIT_BRANCH 
 
