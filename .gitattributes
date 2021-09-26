@@ -29,3 +29,5 @@ data/model-data/** filter=lfs diff=lfs merge=lfs -text
 data/inference-data/** filter=lfs diff=lfs merge=lfs -text
 data/models/model_4/model/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
 data/models/model_4/model/saved_model.pb filter=lfs diff=lfs merge=lfs -text
+data/models/model_4_bis/model/saved_model.pb filter=lfs diff=lfs merge=lfs -text
+data/models/model_4_bis/model/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
