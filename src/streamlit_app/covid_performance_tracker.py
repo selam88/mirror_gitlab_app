@@ -20,7 +20,7 @@ user_input = st.beta_container()
 output_graphs = st.beta_container()
 author_credits = st.beta_container()
 # Hard-coded path, specific to streamlit app sharing
-model_folder = "/app/mirror_gitlab_app/data/models/models_2/"
+model_folder = "/app/mirror_gitlab_app/data/models/model_4_bis/"
 training_folder = "/app/mirror_gitlab_app/data/model-data/"
 inference_folder = "/app/mirror_gitlab_app/data/inference-data/"
 # Load model 

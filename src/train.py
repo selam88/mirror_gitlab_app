@@ -17,7 +17,7 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
         add_dataset: (bool) if True, commit data changes
     """
     # load training data and intialize parameters
-    train_ds, val_ds, last_in_dates, country_array, scaler = load_training_data(as_dataset=True)
+    train_ds, val_ds, last_in_dates, country_array, scaler = load_training_data(as_dataset=True, do_augment=False)
     np.random.seed(0)
     #input_seq, output_seq, scaler = t_u.scale_data(input_seq, output_seq)
     in_timesteps, out_timesteps = val_ds.element_spec[0].shape[1], val_ds.element_spec[1].shape[1]
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--model_name', 
                         help='backup name of the model', 
                         type=str, 
-                        default="model_4")
+                        default="model_4_bis")
     parser.add_argument('-e', '--epochs', 
                         help='number of epochs to train', 
                         type=int, 

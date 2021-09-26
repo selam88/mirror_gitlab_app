@@ -90,7 +90,8 @@ def set_shape(x,y, shape_x, shape_y):
     y = tf.ensure_shape(y, (20,1))
     return x, y
     
-def load_training_data(folder="/work/test-first-project/data/model-data", as_dataset=False, scale=True,
+def load_training_data(folder="/work/test-first-project/data/model-data", 
+                       as_dataset=False, scale=True, do_augment=True,
                       shuffle=True, validation_split=0.08, batch_size=512):
     """
     load training data from hard-coded directory
@@ -119,8 +120,9 @@ def load_training_data(folder="/work/test-first-project/data/model-data", as_dat
         scaler = None
     if as_dataset:
         dataset = tf.data.Dataset.from_tensor_slices((input_seq, output_seq))
-        dataset = dataset.map(lambda x, y: tf.py_function(augment_data, [x,y], [tf.float64, tf.float64]),
-                             num_parallel_calls=tf.data.experimental.AUTOTUNE)
+        if do_augment:
+            dataset = dataset.map(lambda x, y: tf.py_function(augment_data, [x,y], [tf.float64, tf.float64]),
+                                 num_parallel_calls=tf.data.experimental.AUTOTUNE)
         shape_fn = lambda x,y: set_shape(x, y, input_seq.shape[1:], output_seq.shape[1:])
         dataset = dataset.map(shape_fn, num_parallel_calls=tf.data.experimental.AUTOTUNE)
         # splitting validation data

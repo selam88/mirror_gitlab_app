@@ -18,7 +18,6 @@ def main(model_name, models_folder, inference_folder, add_dataset=True):
     model = t_u.scaled_model(model_folder)
     input_seq, output_seq, last_in_dates, country_array, _ = load_training_data(as_dataset=False, scale=False, shuffle=False)
     predictions = model.predict(input_seq)
-
     # record sequences and details
     var_list = [predictions, last_in_dates, country_array]
     name_list = ["predictions.pkl", "last_in_dates", "country.pkl"]
@@ -42,7 +41,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--model_name', 
                         help='name of the model to use', 
                         type=str, 
-                        default="model_4")
+                        default="model_4_bis")
     parser.add_argument('--models_folder', 
                         help='folder containing the saved models', 
                         type=str, 
