@@ -1,11 +1,29 @@
 variables:
   GIT_STRATEGY: clone
   GIT_SSL_NO_VERIFY: "true"
-  GIT_LFS_SKIP_SMUDGE: 1
+  #GIT_LFS_SKIP_SMUDGE: 1
+
+.git-setup: &git_setup
+  - echo "start data setup"
+  - apt-get update -y
+  - apt-get install openssh-client -y
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY" | tr -d ' ' | base64 -d)
+  - git config --global user.email "s.amrari.ci_runner@pm.me"
+  - git config --global user.name "Mr. Robot"
+  - mkdir -p /root/.ssh
+  - ssh-keyscan -H renkulab.io >> gitlab-known-hosts
+  - cat gitlab-known-hosts >> /root/.ssh/known_hosts
+  - mkdir /work
+  - cd /work
+  - git clone git@renkulab.io:selim.amrari.pro/test-first-project.git
+  - cd test-first-project
+  - git lfs install --local
 
 stages:
   - build
   - tests
+  - Data_ingestion
         
 image_build:
   stage: build
@@ -17,6 +35,20 @@ image_build:
     docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
 
+update-build:
+  stage: build
+  image: docker:stable
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
+  rules:
+    - if: $CI_PIPELINE_REF == "Data_ingestion"
+  script: |
+    echo 'ENTRYPOINT /bin/bash' >> Dockerfile
+    docker build --build-arg BUILDKIT_INLINE_CACHE=1 \
+      --tag $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update \
+      --cache-from $CI_REGISTRY_IMAGE .
+    docker push $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
+
 syntax_check:
   stage: tests
   image: python:3.8
@@ -26,10 +58,27 @@ syntax_check:
     - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
     - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     
-pytests:
-  stage: tests
-  image: python:3.8
+#pytests:
+#  stage: tests
+#  image: python:3.8
+#  before_script:
+#    - pip install -r requirements.txt
+#  script:
+#    - pytest --verbose tests
+
+Data_update:
+  stage: Data_ingestion
+  image: 
+    name: $CI_REGISTRY_IMAGE:${CI_COMMIT_SHORT_SHA}-update
   before_script:
-    - pip install -r requirements.txt
+    - *git_setup
+  rules:
+    - if: $CI_PIPELINE_REF == "Data_ingestion"
   script:
-    - pytest tests
+    - git checkout $CI_COMMIT_BRANCH 
+    - chmod +x src/bash_sc/update_data.sh
+    - ls /work/test-first-project/data/models/models_2/model/
+    - ls /work/test-first-project/data/models/models_2/model/variables
+    - src/bash_sc/update_data.sh
+    - git push origin $CI_COMMIT_BRANCH 
+
