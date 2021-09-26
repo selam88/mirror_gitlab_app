@@ -90,8 +90,8 @@ def set_shape(x,y, shape_x, shape_y):
     y = tf.ensure_shape(y, (20,1))
     return x, y
     
-def load_training_data(folder="/work/test-first-project/data/model-data", as_dataset=False,
-                      validation_split=0.08, batch_size=512):
+def load_training_data(folder="/work/test-first-project/data/model-data", as_dataset=False, scale=True,
+                      shuffle=True, validation_split=0.08, batch_size=512):
     """
     load training data from hard-coded directory
     args:
@@ -108,11 +108,15 @@ def load_training_data(folder="/work/test-first-project/data/model-data", as_dat
     output_seq = load_obj(os.path.join(folder, "output_sequences.pkl"))
     last_in_dates = load_obj(os.path.join(folder, "last_in_dates.pkl"))
     country_array = load_obj(os.path.join(folder, "country.pkl"))
-    np.random.seed(42)
-    permute_id = np.random.permutation(input_seq.shape[0])
-    input_seq, output_seq = input_seq[permute_id], output_seq[permute_id]
-    last_in_dates, country_array = last_in_dates[permute_id], country_array[permute_id]
-    input_seq, output_seq, scaler = scale_data(input_seq, output_seq)
+    if shuffle:
+        np.random.seed(42)
+        permute_id = np.random.permutation(input_seq.shape[0])
+        input_seq, output_seq = input_seq[permute_id], output_seq[permute_id]
+        last_in_dates, country_array = last_in_dates[permute_id], country_array[permute_id]
+    if scale:
+        input_seq, output_seq, scaler = scale_data(input_seq, output_seq)
+    else:
+        scaler = None
     if as_dataset:
         dataset = tf.data.Dataset.from_tensor_slices((input_seq, output_seq))
         dataset = dataset.map(lambda x, y: tf.py_function(augment_data, [x,y], [tf.float64, tf.float64]),
