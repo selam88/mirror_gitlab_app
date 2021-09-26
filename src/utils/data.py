@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 from covid_daily.constants import AVAILABLE_CHARTS 
 from datetime import date
-
+import tensorflow as tf
+from scipy.ndimage import maximum_filter
+from copy import deepcopy
 
 def records_country(country_name, data_folder):
     """
@@ -69,7 +71,27 @@ def load_obj(name):
     with open(name, 'rb') as f:
         return pickle.load(f)
     
-def load_training_data(folder="/work/test-first-project/data/model-data"):
+def augment_data(train_seq, target_set, percent_noise=5.0):
+    """add random noise to input sequences"""
+    new_train_seq = deepcopy(train_seq.numpy())
+    max_noise = maximum_filter(new_train_seq, size=(15,1), mode="nearest")
+    max_noise = np.round(max_noise*(percent_noise/100.0)).astype(np.int)
+    max_noise[max_noise<1] = 1
+    assert np.sum(max_noise<1)==0
+    noise = np.random.randint(-1*max_noise, max_noise) 
+    new_train_seq = new_train_seq + noise
+    new_train_seq[new_train_seq<0] = 0
+    return tf.convert_to_tensor(new_train_seq), target_set
+
+@tf.function
+def set_shape(x,y, shape_x, shape_y):
+    """set tensors shape"""
+    x = tf.ensure_shape(x, (40,2))
+    y = tf.ensure_shape(y, (20,1))
+    return x, y
+    
+def load_training_data(folder="/work/test-first-project/data/model-data", as_dataset=False,
+                      validation_split=0.08, batch_size=512):
     """
     load training data from hard-coded directory
     args:
@@ -80,11 +102,33 @@ def load_training_data(folder="/work/test-first-project/data/model-data"):
         last_in_dates: (numpy array) array of index of the last timesteps from input sequences
         country_array: (numpy array) array of countries corresponding to the sequences 
     """
+    from .train import scale_data
+    
     input_seq = load_obj(os.path.join(folder, "input_sequences.pkl"))
     output_seq = load_obj(os.path.join(folder, "output_sequences.pkl"))
     last_in_dates = load_obj(os.path.join(folder, "last_in_dates.pkl"))
     country_array = load_obj(os.path.join(folder, "country.pkl"))
-    return input_seq, output_seq, last_in_dates, country_array
+    np.random.seed(42)
+    permute_id = np.random.permutation(input_seq.shape[0])
+    input_seq, output_seq = input_seq[permute_id], output_seq[permute_id]
+    last_in_dates, country_array = last_in_dates[permute_id], country_array[permute_id]
+    input_seq, output_seq, scaler = scale_data(input_seq, output_seq)
+    if as_dataset:
+        dataset = tf.data.Dataset.from_tensor_slices((input_seq, output_seq))
+        dataset = dataset.map(lambda x, y: tf.py_function(augment_data, [x,y], [tf.float64, tf.float64]),
+                             num_parallel_calls=tf.data.experimental.AUTOTUNE)
+        shape_fn = lambda x,y: set_shape(x, y, input_seq.shape[1:], output_seq.shape[1:])
+        dataset = dataset.map(shape_fn, num_parallel_calls=tf.data.experimental.AUTOTUNE)
+        # splitting validation data
+        #dataset = dataset.shuffle(len(dataset), seed=8)
+        train_size = int((1-validation_split) * len(dataset))
+        train_ds = dataset.take(train_size)    
+        val_ds = dataset.skip(train_size)
+        train_ds = train_ds.batch(batch_size).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+        val_ds = val_ds.batch(batch_size).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+        return train_ds, val_ds, last_in_dates, country_array, scaler
+    else:
+        return input_seq, output_seq, last_in_dates, country_array, scaler
 
 def load_prediction_data(model_folder="/work/test-first-project/data/model-data/", 
                          inference_folder="/work/test-first-project/data/inference-data"):

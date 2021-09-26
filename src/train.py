@@ -17,15 +17,16 @@ def main(model_name, n_epochs=30, n_units=50, models_folder="/work/test-first-pr
         add_dataset: (bool) if True, commit data changes
     """
     # load training data and intialize parameters
-    input_seq, output_seq, last_in_dates, country_array = load_training_data()
+    train_ds, val_ds, last_in_dates, country_array, scaler = load_training_data(as_dataset=True)
     np.random.seed(0)
-    input_seq, output_seq, scaler = t_u.scale_data(input_seq, output_seq)
-    in_timesteps, out_timesteps, n_features = input_seq.shape[1], output_seq.shape[1], input_seq.shape[2]
+    #input_seq, output_seq, scaler = t_u.scale_data(input_seq, output_seq)
+    in_timesteps, out_timesteps = val_ds.element_spec[0].shape[1], val_ds.element_spec[1].shape[1]
+    n_features  = val_ds.element_spec[0].shape[2]
     print("sequences length, inputs: {0:d}, output:{1:d}".format(in_timesteps, out_timesteps))
     
     # set up model, train and record
     model = t_u.set_MVar_EncDec_lstm(in_timesteps, out_timesteps, n_features, n_units=n_units)
-    model.fit(input_seq, output_seq, epochs=n_epochs, batch_size=512, validation_split=0.08)
+    model.fit(train_ds, epochs=n_epochs, validation_data=val_ds)
     model_path = os.path.join(models_folder, model_name)
     t_u.save_model_score(model_path, model, scaler=scaler)
     
@@ -51,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--model_name', 
                         help='backup name of the model', 
                         type=str, 
-                        default="model_3")
+                        default="model_4")
     parser.add_argument('-e', '--epochs', 
                         help='number of epochs to train', 
                         type=int, 
