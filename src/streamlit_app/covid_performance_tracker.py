@@ -41,7 +41,7 @@ with header:
 
 # Process predictions data
 predictions, last_in_dates, country_array, overall_df = load_prediction_data(model_folder=training_folder, inference_folder=inference_folder)
-input_seq, output_seq, _, _ = load_training_data(folder=training_folder)
+input_seq, output_seq, _, _, _ = load_training_data(folder=training_folder, scale=False, do_augment=False, shuffle=False, as_dataset=False)
 datetime_index = [d for d in map(pd.to_datetime, last_in_dates)]
 data_dic = {"infered_array": [v.ravel() for v in predictions], "country": country_array}
 predictions_df = pd.DataFrame(data=data_dic, index=datetime_index)
