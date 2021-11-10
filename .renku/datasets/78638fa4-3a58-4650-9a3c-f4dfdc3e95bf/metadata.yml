@@ -1,344 +1,8 @@
-- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F882da501-8b78-419f-a1d0-84deec427ecd
+- '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F0e0cc917-cfa7-4846-a85b-edda7401e55d
   '@type':
   - http://schema.org/URL
   http://schema.org/url:
-  - '@id': https://renkulab.io/datasets/882da501-8b78-419f-a1d0-84deec427ecd
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/australia.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.509482+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': australia.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/australia.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/australia.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/australia.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/australia.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/austria.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.481101+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': austria.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/austria.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/austria.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/austria.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/austria.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/brazil.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.455419+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': brazil.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/brazil.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/brazil.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/brazil.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/brazil.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/canada.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.462884+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': canada.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/canada.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/canada.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/canada.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/canada.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/china.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.546204+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': china.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/china.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/china.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/china.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/china.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/denmark.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.500508+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': denmark.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/denmark.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/denmark.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/denmark.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/denmark.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/finland.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.527408+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': finland.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/finland.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/finland.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/finland.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/finland.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/france.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.418799+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': france.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/france.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/france.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/france.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/france.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/germany.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.428300+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': germany.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/germany.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/germany.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/germany.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/germany.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/iceland.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.536412+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': iceland.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/iceland.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/iceland.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/iceland.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/iceland.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/iran.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.447125+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': iran.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/iran.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/iran.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/iran.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/iran.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/israel.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.472160+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': israel.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/israel.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/israel.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/israel.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/israel.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/italy.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.411777+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': italy.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/italy.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/italy.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/italy.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/italy.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/panama.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.518842+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': panama.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/panama.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/panama.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/panama.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/panama.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/poland.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.490409+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': poland.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/poland.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/poland.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/poland.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/poland.csv
-- '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/turkey.csv
-  '@type':
-  - http://purl.org/wf4ever/wfprov#Artifact
-  - http://schema.org/DigitalDocument
-  - http://www.w3.org/ns/prov#Entity
-  http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:56.437499+00:00'
-  http://schema.org/isPartOf:
-  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
-  http://schema.org/name:
-  - '@value': turkey.csv
-  http://schema.org/url:
-  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/turkey.csv
-  http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': data/worldometers-data/turkey.csv@d8f6a7b9ee8ad776413179029ec6e5524fa58078
-  http://www.w3.org/ns/prov#atLocation:
-  - '@value': data/worldometers-data/turkey.csv
-  https://swissdatasciencecenter.github.io/renku-ontology#external:
-  - '@value': false
-  https://swissdatasciencecenter.github.io/renku-ontology#source:
-  - '@value': data/worldometers-data/turkey.csv
+  - '@id': https://renkulab.io/datasets/0e0cc917-cfa7-4846-a85b-edda7401e55d
 - '@id': https://renkulab.io/blob/e19449b32a8339a9768ea34b03d7f3be679f8565/data/worldometers-data/details.json
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
@@ -360,7 +24,343 @@
   - '@value': false
   https://swissdatasciencecenter.github.io/renku-ontology#source:
   - '@value': data/worldometers-data/details.json
-- '@id': https://renkulab.io/datasets/0e0cc917-cfa7-4846-a85b-edda7401e55d
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/australia.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.416638+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': australia.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/australia.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/australia.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/australia.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/australia.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/austria.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.372978+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': austria.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/austria.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/austria.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/austria.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/austria.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/brazil.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.343213+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': brazil.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/brazil.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/brazil.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/brazil.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/brazil.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/canada.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.352110+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': canada.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/canada.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/canada.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/canada.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/canada.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/china.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.477569+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': china.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/china.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/china.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/china.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/china.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/denmark.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.398570+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': denmark.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/denmark.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/denmark.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/denmark.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/denmark.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/finland.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.446738+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': finland.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/finland.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/finland.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/finland.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/finland.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/france.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.271139+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': france.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/france.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/france.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/france.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/france.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/germany.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.284001+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': germany.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/germany.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/germany.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/germany.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/germany.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/iceland.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.461850+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': iceland.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/iceland.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/iceland.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/iceland.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/iceland.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/iran.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.326238+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': iran.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/iran.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/iran.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/iran.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/iran.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/israel.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.362828+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': israel.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/israel.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/israel.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/israel.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/israel.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/italy.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.256918+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': italy.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/italy.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/italy.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/italy.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/italy.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/panama.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.426834+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': panama.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/panama.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/panama.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/panama.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/panama.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/poland.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.384201+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': poland.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/poland.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/poland.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/poland.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/poland.csv
+- '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/turkey.csv
+  '@type':
+  - http://purl.org/wf4ever/wfprov#Artifact
+  - http://schema.org/DigitalDocument
+  - http://www.w3.org/ns/prov#Entity
+  http://schema.org/dateCreated:
+  - '@value': '2021-11-10T14:45:19.306177+00:00'
+  http://schema.org/isPartOf:
+  - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
+  http://schema.org/name:
+  - '@value': turkey.csv
+  http://schema.org/url:
+  - '@value': https://renkulab.io/projects/selim.amrari.pro/test-first-project/files/blob/data/worldometers-data/turkey.csv
+  http://www.w3.org/2000/01/rdf-schema#label:
+  - '@value': data/worldometers-data/turkey.csv@ef3fd2332b487687704a80417061dc03ab085068
+  http://www.w3.org/ns/prov#atLocation:
+  - '@value': data/worldometers-data/turkey.csv
+  https://swissdatasciencecenter.github.io/renku-ontology#external:
+  - '@value': false
+  https://swissdatasciencecenter.github.io/renku-ontology#source:
+  - '@value': data/worldometers-data/turkey.csv
+- '@id': https://renkulab.io/datasets/b16f9319-2e6a-429b-a330-535027234f4e
   '@type':
   - http://purl.org/wf4ever/wfprov#Artifact
   - http://schema.org/Dataset
@@ -371,27 +371,27 @@
   - '@id': mailto:selim.amrari.pro@protonmail.ch
   - '@id': mailto:s.amrari.ci_runner@pm.me
   http://schema.org/dateCreated:
-  - '@value': '2021-09-23T20:10:59.921068+00:00'
+  - '@value': '2021-11-10T14:45:19.480408+00:00'
   http://schema.org/hasPart:
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/italy.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/france.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/germany.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/turkey.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/iran.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/brazil.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/canada.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/israel.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/austria.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/poland.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/denmark.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/australia.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/panama.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/finland.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/iceland.csv
-  - '@id': https://renkulab.io/blob/d8f6a7b9ee8ad776413179029ec6e5524fa58078/data/worldometers-data/china.csv
   - '@id': https://renkulab.io/blob/e19449b32a8339a9768ea34b03d7f3be679f8565/data/worldometers-data/details.json
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/italy.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/france.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/germany.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/turkey.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/iran.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/brazil.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/canada.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/israel.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/austria.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/poland.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/denmark.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/australia.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/panama.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/finland.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/iceland.csv
+  - '@id': https://renkulab.io/blob/ef3fd2332b487687704a80417061dc03ab085068/data/worldometers-data/china.csv
   http://schema.org/identifier:
-  - '@value': 0e0cc917-cfa7-4846-a85b-edda7401e55d
+  - '@value': b16f9319-2e6a-429b-a330-535027234f4e
   http://schema.org/isPartOf:
   - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   http://schema.org/keywords: []
@@ -399,13 +399,13 @@
   - '@value': covid data from worldometers.info/
   http://schema.org/subjectOf: []
   http://schema.org/url:
-  - '@value': https://renkulab.io/datasets/0e0cc917-cfa7-4846-a85b-edda7401e55d
+  - '@value': https://renkulab.io/datasets/b16f9319-2e6a-429b-a330-535027234f4e
   http://www.w3.org/2000/01/rdf-schema#label:
-  - '@value': 0e0cc917-cfa7-4846-a85b-edda7401e55d
+  - '@value': b16f9319-2e6a-429b-a330-535027234f4e
   http://www.w3.org/ns/prov#atLocation:
   - '@value': .renku/datasets/78638fa4-3a58-4650-9a3c-f4dfdc3e95bf
   http://www.w3.org/ns/prov#wasDerivedFrom:
-  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F882da501-8b78-419f-a1d0-84deec427ecd
+  - '@id': https://localhost/urls/%2F%2Frenkulab.io%2Fdatasets%2F0e0cc917-cfa7-4846-a85b-edda7401e55d
 - '@id': https://renkulab.io/projects/selim.amrari.pro/test-first-project
   '@type':
   - http://schema.org/Project
